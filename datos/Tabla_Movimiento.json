@@ -1,0 +1,36 @@
+{
+  "meta": {
+    "tabla": "MOVIMIENTO",
+    "nombre": "Movimiento Base por Raza y Tipo de Armadura",
+    "fuente": "MERP, secciones de movimiento y combate",
+    "nota": "Movimiento en metros por asalto (10 segundos). Son valores base; modificadores de MM y penalizaciones por armadura/carga pueden reducirlos."
+  },
+  "movimiento_base_por_raza": {
+    "humano": {"metros_asalto": 10, "km_hora_marcha": 3.6, "km_hora_carrera": 7.2},
+    "dunedain": {"metros_asalto": 10, "km_hora_marcha": 3.6, "km_hora_carrera": 7.2},
+    "alto_elfo": {"metros_asalto": 12, "km_hora_marcha": 4.3, "km_hora_carrera": 8.6},
+    "elfo_silvano": {"metros_asalto": 12, "km_hora_marcha": 4.3, "km_hora_carrera": 8.6},
+    "enano": {"metros_asalto": 8, "km_hora_marcha": 2.9, "km_hora_carrera": 5.8},
+    "hobbit": {"metros_asalto": 8, "km_hora_marcha": 2.9, "km_hora_carrera": 5.8},
+    "medio_elfo": {"metros_asalto": 11, "km_hora_marcha": 4.0, "km_hora_carrera": 7.9},
+    "orco": {"metros_asalto": 10, "km_hora_marcha": 3.6, "km_hora_carrera": 7.2},
+    "troll": {"metros_asalto": 9, "km_hora_marcha": 3.2, "km_hora_carrera": 6.5}
+  },
+  "modificadores_por_armadura": {
+    "sin_armadura": 0,
+    "ropa_acolchada": 0,
+    "cuero_tachonado": 0,
+    "cota_de_cuero": 0,
+    "cota_de_anillas": -2,
+    "cota_de_malla": -3,
+    "coraza": -5,
+    "armadura_de_placas_completa": -8
+  },
+  "notas": [
+    "Metros por asalto × 36 = metros por minuto (aproximadamente).",
+    "Marcha forzada: hasta 8 horas/día × km/hora_marcha.",
+    "Carrera continua: hasta 1 hora × km_hora_carrera (con tiradas de fatiga después).",
+    "Penalización por armadura se resta del movimiento base en carrera. En marcha normal, la penalización es la mitad.",
+    "Penalización por carga (BT-5) también afecta al movimiento (a criterio del DJ, aplicar el mismo valor que a MM)."
+  ]
+}

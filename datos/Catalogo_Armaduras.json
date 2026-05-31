@@ -1,0 +1,114 @@
+{
+  "meta": {
+    "tabla": "ARMADURAS",
+    "nombre": "Catálogo de Armaduras y Penalizaciones",
+    "fuente": "MERP, sección de armaduras y combate (páginas 164-165, 179-182 para penalizaciones MM)",
+    "nota": "Cada armadura tiene un tipo numérico (1-20) usado en las tablas de ataque AT para determinar el daño y críticos. La penalización a Movimiento y Maniobra (MM) se resta del bono_especial de la habilidad MM."
+  },
+  "armaduras": [
+    {
+      "nombre": "Sin Armadura",
+      "tipo_armadura": 1,
+      "penalizacion_mm": 0,
+      "peso_kg": 0,
+      "categoria": "ninguna",
+      "descripcion": "Ropa normal. Sin protección adicional.",
+      "bonificacion_defensiva": 0
+    },
+    {
+      "nombre": "Ropa Acolchada",
+      "tipo_armadura": 3,
+      "penalizacion_mm": -5,
+      "peso_kg": 1.0,
+      "categoria": "ligera",
+      "descripcion": "Chaquetón acolchado. Protección mínima.",
+      "bonificacion_defensiva": 5
+    },
+    {
+      "nombre": "Cuero Tachonado",
+      "tipo_armadura": 5,
+      "penalizacion_mm": -10,
+      "peso_kg": 3.0,
+      "categoria": "ligera",
+      "descripcion": "Chaleco de cuero con remaches metálicos.",
+      "bonificacion_defensiva": 10
+    },
+    {
+      "nombre": "Cota de Cuero",
+      "tipo_armadura": 7,
+      "penalizacion_mm": -15,
+      "peso_kg": 4.0,
+      "categoria": "ligera",
+      "descripcion": "Armadura completa de cuero endurecido.",
+      "bonificacion_defensiva": 15
+    },
+    {
+      "nombre": "Cota de Anillas",
+      "tipo_armadura": 10,
+      "penalizacion_mm": -20,
+      "peso_kg": 5.0,
+      "categoria": "media",
+      "descripcion": "Cota de anillas metálicas sobre base de cuero.",
+      "bonificacion_defensiva": 20
+    },
+    {
+      "nombre": "Cota de Malla",
+      "tipo_armadura": 14,
+      "penalizacion_mm": -30,
+      "peso_kg": 8.0,
+      "categoria": "pesada",
+      "descripcion": "Cota de anillas entrelazadas (malla). Cubre torso y brazos.",
+      "bonificacion_defensiva": 25,
+      "nota": "Requiere Fuerza para MM (ver BT-2)."
+    },
+    {
+      "nombre": "Coraza (Malla y Placas)",
+      "tipo_armadura": 16,
+      "penalizacion_mm": -40,
+      "peso_kg": 12.0,
+      "categoria": "pesada",
+      "descripcion": "Combinación de malla y placas metálicas (mitad malla).",
+      "bonificacion_defensiva": 30,
+      "nota": "Requiere Fuerza para MM (ver BT-2)."
+    },
+    {
+      "nombre": "Armadura de Placas Completa",
+      "tipo_armadura": 20,
+      "penalizacion_mm": -60,
+      "peso_kg": 20.0,
+      "categoria": "muy_pesada",
+      "descripcion": "Armadura completa de placas de acero. Protección máxima.",
+      "bonificacion_defensiva": 35,
+      "nota": "Requiere Fuerza para MM (ver BT-2). Movimiento muy restringido."
+    }
+  ],
+  "escudos": [
+    {
+      "nombre": "Escudo Pequeño (Broquel)",
+      "penalizacion_mm": -5,
+      "peso_kg": 1.5,
+      "bonificacion_defensiva": 10,
+      "nota": "Permite usar arma a 1 mano en la otra."
+    },
+    {
+      "nombre": "Escudo Mediano",
+      "penalizacion_mm": -10,
+      "peso_kg": 3.0,
+      "bonificacion_defensiva": 20,
+      "nota": "Protección equilibrada. Permite arma a 1 mano."
+    },
+    {
+      "nombre": "Escudo Grande (Escudo de Cuerpo)",
+      "penalizacion_mm": -20,
+      "peso_kg": 5.0,
+      "bonificacion_defensiva": 30,
+      "nota": "Cubre casi todo el cuerpo. Dificulta movimiento."
+    }
+  ],
+  "reglas": {
+    "bonificacion_defensiva": "Se suma a la BD (Bonificación Defensiva) del personaje en combate.",
+    "penalizacion_mm": "Se acumula con penalización por carga (BT-5). Ambas se aplican al bono_especial de MM.",
+    "movimiento_y_caracteristica": "Armaduras ligeras y sin armadura: MM usa Agilidad. Armaduras pesadas (Malla, Coraza, Placas): MM usa Fuerza.",
+    "peso_armadura": "El peso de la armadura puesta NO se cuenta para la penalización por carga (BT-5), pero SÍ para límites de transporte extremos (a criterio del DJ)."
+  }
+}

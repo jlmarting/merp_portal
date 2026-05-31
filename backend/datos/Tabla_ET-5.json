@@ -1,0 +1,41 @@
+{
+  "meta": {
+    "tabla": "ET-5",
+    "nombre": "Puntos de Experiencia por Nivel",
+    "fuente": "MERP, páginas 22-24. Tabla de progresión de niveles.",
+    "nota": "Valores canónicos de la edición española. La experiencia requerida se acumula. Nivel 1 = 0 de experiencia inicial."
+  },
+  "progresion": [
+    {"nivel": 1, "experiencia_minima": 0, "experiencia_maxima": 9999},
+    {"nivel": 2, "experiencia_minima": 10000, "experiencia_maxima": 19999},
+    {"nivel": 3, "experiencia_minima": 20000, "experiencia_maxima": 29999},
+    {"nivel": 4, "experiencia_minima": 30000, "experiencia_maxima": 39999},
+    {"nivel": 5, "experiencia_minima": 40000, "experiencia_maxima": 49999},
+    {"nivel": 6, "experiencia_minima": 50000, "experiencia_maxima": 59999},
+    {"nivel": 7, "experiencia_minima": 60000, "experiencia_maxima": 69999},
+    {"nivel": 8, "experiencia_minima": 70000, "experiencia_maxima": 79999},
+    {"nivel": 9, "experiencia_minima": 80000, "experiencia_maxima": 89999},
+    {"nivel": 10, "experiencia_minima": 90000, "experiencia_maxima": 99999},
+    {"nivel": 11, "experiencia_minima": 110000, "experiencia_maxima": 119999, "nota": "+20,000 sobre nivel anterior"},
+    {"nivel": 12, "experiencia_minima": 130000, "experiencia_maxima": 139999},
+    {"nivel": 13, "experiencia_minima": 150000, "experiencia_maxima": 159999},
+    {"nivel": 14, "experiencia_minima": 170000, "experiencia_maxima": 179999},
+    {"nivel": 15, "experiencia_minima": 190000, "experiencia_maxima": 199999},
+    {"nivel": 16, "experiencia_minima": 210000, "experiencia_maxima": 219999},
+    {"nivel": 17, "experiencia_minima": 230000, "experiencia_maxima": 239999},
+    {"nivel": 18, "experiencia_minima": 250000, "experiencia_maxima": 259999},
+    {"nivel": 19, "experiencia_minima": 270000, "experiencia_maxima": 279999},
+    {"nivel": 20, "experiencia_minima": 290000, "experiencia_maxima": 299999},
+    {"nivel": 21, "experiencia_minima": 320000, "experiencia_maxima": 329999, "nota": "+30,000 sobre nivel anterior"},
+    {"nivel": 22, "experiencia_minima": 350000, "experiencia_maxima": 359999},
+    {"nivel": 23, "experiencia_minima": 380000, "experiencia_maxima": 389999},
+    {"nivel": 24, "experiencia_minima": 410000, "experiencia_maxima": 419999},
+    {"nivel": 25, "experiencia_minima": 440000, "experiencia_maxima": 449999}
+  ],
+  "notas_adicionales": [
+    "Niveles 1-10: +10,000 por nivel desde nivel anterior.",
+    "Niveles 11-20: +20,000 por nivel desde nivel anterior.",
+    "Niveles 21+: +30,000 por nivel desde nivel anterior.",
+    "Para niveles superiores a 25, continuar sumando 30,000 por nivel."
+  ]
+}

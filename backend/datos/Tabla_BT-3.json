@@ -1,0 +1,196 @@
+{
+  "meta": {
+    "tabla": "BT-3",
+    "nombre": "Modificadores Raciales de Características y Resistencias",
+    "fuente": "Manual MERP, página 30",
+    "nota": "Estos valores se suman a las bonificaciones de BT-1 para obtener el bono total por característica. También modifican las Tiradas de Resistencia (TR)."
+  },
+  "razas": {
+    "humano": {
+      "nombre": "Humano (Occidental)",
+      "modificadores_caracteristicas": {
+        "fuerza": 0,
+        "agilidad": 0,
+        "constitucion": 0,
+        "inteligencia": 0,
+        "intuicion": 0,
+        "presencia": 0,
+        "apariencia": 0
+      },
+      "resistencias": {
+        "enfermedad": 0,
+        "veneno": 0,
+        "miedo": 0,
+        "frio": 0,
+        "calor": 0
+      },
+      "nota": "Referencia base. Otros humanos (Dúnedain, del Norte, de los Campos del Sur) tienen valores propios."
+    },
+    "dunedain": {
+      "nombre": "Dúnedain",
+      "modificadores_caracteristicas": {
+        "fuerza": 5,
+        "agilidad": 5,
+        "constitucion": 5,
+        "inteligencia": 5,
+        "intuicion": 5,
+        "presencia": 5,
+        "apariencia": 5
+      },
+      "resistencias": {
+        "enfermedad": 10,
+        "veneno": 10,
+        "miedo": 10,
+        "frio": 0,
+        "calor": 0
+      },
+      "nota": "Descendientes de Númenor. Mayor longevidad y resistencia."
+    },
+    "alto_elfo": {
+      "nombre": "Alto Elfo (Noldor / Sindar)",
+      "modificadores_caracteristicas": {
+        "fuerza": 0,
+        "agilidad": 5,
+        "constitucion": 10,
+        "inteligencia": 5,
+        "intuicion": 5,
+        "presencia": 10,
+        "apariencia": 20
+      },
+      "resistencias": {
+        "enfermedad": 100,
+        "veneno": 20,
+        "miedo": 10,
+        "frio": 0,
+        "calor": 0
+      },
+      "nota": "Inmunes a enfermedades naturales. Los Noldor y Sindar comparten valores similares."
+    },
+    "elfo_silvano": {
+      "nombre": "Elfo Silvano",
+      "modificadores_caracteristicas": {
+        "fuerza": 0,
+        "agilidad": 5,
+        "constitucion": 5,
+        "inteligencia": 5,
+        "intuicion": 5,
+        "presencia": 5,
+        "apariencia": 10
+      },
+      "resistencias": {
+        "enfermedad": 100,
+        "veneno": 20,
+        "miedo": 10,
+        "frio": 0,
+        "calor": 0
+      },
+      "nota": "Elfos de los bosques (Mirkwood, Lórien)."
+    },
+    "enano": {
+      "nombre": "Enano",
+      "modificadores_caracteristicas": {
+        "fuerza": 5,
+        "agilidad": -5,
+        "constitucion": 10,
+        "inteligencia": 0,
+        "intuicion": 0,
+        "presencia": 0,
+        "apariencia": -5
+      },
+      "resistencias": {
+        "enfermedad": 20,
+        "veneno": 20,
+        "miedo": 10,
+        "frio": 20,
+        "calor": 0
+      },
+      "nota": "Resistentes y tenaces. Bonificación natural contra venenos y enfermedades."
+    },
+    "hobbit": {
+      "nombre": "Hobbit",
+      "modificadores_caracteristicas": {
+        "fuerza": -10,
+        "agilidad": 5,
+        "constitucion": 0,
+        "inteligencia": 0,
+        "intuicion": 5,
+        "presencia": 0,
+        "apariencia": 10
+      },
+      "resistencias": {
+        "enfermedad": 20,
+        "veneno": 20,
+        "miedo": 10,
+        "frio": 20,
+        "calor": 0
+      },
+      "nota": "Pequeños, ágiles y discretos."
+    },
+    "medio_elfo": {
+      "nombre": "Medio-elfo",
+      "modificadores_caracteristicas": {
+        "fuerza": 0,
+        "agilidad": 0,
+        "constitucion": 0,
+        "inteligencia": 5,
+        "intuicion": 5,
+        "presencia": 5,
+        "apariencia": 10
+      },
+      "resistencias": {
+        "enfermedad": 50,
+        "veneno": 10,
+        "miedo": 5,
+        "frio": 0,
+        "calor": 0
+      },
+      "nota": "Descendencia mixta humano-elfo."
+    },
+    "orco": {
+      "nombre": "Orco",
+      "modificadores_caracteristicas": {
+        "fuerza": 5,
+        "agilidad": 0,
+        "constitucion": 5,
+        "inteligencia": -10,
+        "intuicion": -5,
+        "presencia": -10,
+        "apariencia": -20
+      },
+      "resistencias": {
+        "enfermedad": 10,
+        "veneno": 10,
+        "miedo": 5,
+        "frio": 10,
+        "calor": 0
+      },
+      "nota": "Penalizaciones severas en habilidades mágicas y sociales."
+    },
+    "troll": {
+      "nombre": "Troll",
+      "modificadores_caracteristicas": {
+        "fuerza": 20,
+        "agilidad": -10,
+        "constitucion": 15,
+        "inteligencia": -20,
+        "intuicion": -10,
+        "presencia": -20,
+        "apariencia": -30
+      },
+      "resistencias": {
+        "enfermedad": 10,
+        "veneno": 10,
+        "miedo": 10,
+        "frio": 20,
+        "calor": 0
+      },
+      "nota": "Extremadamente fuertes pero brutos. No aptos para magia ni diplomacia."
+    }
+  },
+  "notas_aplicacion": [
+    "Los modificadores de características se suman al valor base antes de consultar BT-1.",
+    "Las resistencias se suman directamente a las Tiradas de Resistencia (TR) del personaje.",
+    "Elfos (Silvanos, Sindar, Noldor): +100 a enfermedad los hace virtualmente inmunes a dolencias naturales.",
+    "Trolls y Orcos sufren penalizaciones severas en Inteligencia, Intuición y Presencia."
+  ]
+}

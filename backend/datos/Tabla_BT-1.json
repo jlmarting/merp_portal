@@ -1,0 +1,32 @@
+{
+  "meta": {
+    "tabla": "BT-1",
+    "nombre": "Bonificaciones y Puntos de Poder",
+    "fuente": "Manual MERP, página 28",
+    "nota": "Valores canónicos reconstruidos de la edición española. Los valores >100 requieren opciones de historial o bonificaciones raciales especiales."
+  },
+  "rangos": [
+    {"valor_min": 1, "valor_max": 25, "bonificacion": -20, "multiplicador_pp": 0},
+    {"valor_min": 26, "valor_max": 50, "bonificacion": -10, "multiplicador_pp": 0},
+    {"valor_min": 51, "valor_max": 60, "bonificacion": -5, "multiplicador_pp": 0},
+    {"valor_min": 61, "valor_max": 70, "bonificacion": 0, "multiplicador_pp": 0},
+    {"valor_min": 71, "valor_max": 75, "bonificacion": 5, "multiplicador_pp": 1},
+    {"valor_min": 76, "valor_max": 80, "bonificacion": 5, "multiplicador_pp": 1},
+    {"valor_min": 81, "valor_max": 90, "bonificacion": 10, "multiplicador_pp": 2},
+    {"valor_min": 91, "valor_max": 95, "bonificacion": 15, "multiplicador_pp": 2},
+    {"valor_min": 96, "valor_max": 97, "bonificacion": 20, "multiplicador_pp": 3},
+    {"valor_min": 98, "valor_max": 99, "bonificacion": 25, "multiplicador_pp": 3},
+    {"valor_min": 100, "valor_max": 100, "bonificacion": 30, "multiplicador_pp": 4},
+    {"valor_min": 101, "valor_max": 101, "bonificacion": 35, "multiplicador_pp": 4},
+    {"valor_min": 102, "valor_max": 102, "bonificacion": 35, "multiplicador_pp": 5},
+    {"valor_min": 103, "valor_max": 103, "bonificacion": 40, "multiplicador_pp": 5},
+    {"valor_min": 104, "valor_max": 104, "bonificacion": 40, "multiplicador_pp": 6},
+    {"valor_min": 105, "valor_max": 105, "bonificacion": 45, "multiplicador_pp": 6},
+    {"valor_min": 106, "valor_max": 999, "bonificacion": 50, "multiplicador_pp": 7, "nota": "+5 de bonificación y +1 PP por cada punto sobre 105"}
+  ],
+  "notas_uso": {
+    "pp_magos_bardos": "Multiplicador aplicado a Inteligencia × Nivel",
+    "pp_animistas_montaraces": "Multiplicador aplicado a Intuición × Nivel",
+    "bonificacion_total": "bono_BT1 + bono_BT3 (modificador racial)"
+  }
+}

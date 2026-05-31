@@ -1,0 +1,73 @@
+{
+  "meta": {
+    "tabla": "ST-1",
+    "nombre": "Idiomas de la Tierra Media",
+    "fuente": "Manual MERP, página 31",
+    "nota": "Los idiomas iniciales de un personaje dependen de su raza. El grado indica fluidez (1-5)."
+  },
+  "escala_grados": {
+    "1": "Comunicación verbal básica (frases sencillas). Ni leer ni escribir.",
+    "2": "Construcciones sencillas. Permite leer frases sencillas. No escribir.",
+    "3": "Fluidez hablada (con acento). Leer y escribir textos simples.",
+    "4": "Capacidad de un hombre de letras medio. Sin acento marcado.",
+    "5": "Absoluta fluidez sin acento extranjero. Lee y escribe al completo. Lengua materna."
+  },
+  "idiomas_catalogo": {
+    "westron": {"nombre_comun": "Westron / Común", "descripcion": "Lengua franca de la Tierra Media. Derivada de Adûnaic."},
+    "sindarin": {"nombre_comun": "Sindarin / Élfico Gris", "descripcion": "Lengua de los Elfos de la Tierra Media (Beleriand, Lindon, Lórien, Mirkwood)."},
+    "quenya": {"nombre_comun": "Quenya / Élfico Alto", "descripcion": "Lengua antigua de los Noldor y Vanyar. Usada en rituales y arte."},
+    "silvano": {"nombre_comun": "Élfico Silvano / Nandorin", "descripcion": "Dialecto de los Elfos del Bosque Negro y Lórien."},
+    "khuzdul": {"nombre_comun": "Khuzdul", "descripcion": "Lengua secreta de los Enanos. Raramente enseñada a otras razas."},
+    "orquen": {"nombre_comun": "Orquen / Lengua Negra", "descripcion": "Lenguas brutales de Orcos y Trolls. Basada en deformaciones de otras lenguas."},
+    "black_speech": {"nombre_comun": "Lengua Negra de Mordor", "descripcion": "Creada por Sauron. Muy pocos la conocen. Usada en inscripciones y conjuros."},
+    "rohirric": {"nombre_comun": "Rohirric", "descripcion": "Lengua de los Hombres del Norte (Rohan). Parente del Westron."},
+    "dunael": {"nombre_comun": "Dunael", "descripcion": "Lengua de los Hombres de Dunland."},
+    "entish": {"nombre_comun": "Entish", "descripcion": "Lengua de los Ents. Extremadamente lenta y compleja."},
+    "valarin": {"nombre_comun": "Valarin", "descripcion": "Lengua de los Valar. Desconocida para casi todos los mortales."}
+  },
+  "idiomas_por_raza": {
+    "humano": [
+      {"idioma": "westron", "grado": 5, "lengua_materna": true},
+      {"idioma": "sindarin", "grado": 1, "lengua_materna": false}
+    ],
+    "dunedain": [
+      {"idioma": "westron", "grado": 5, "lengua_materna": true},
+      {"idioma": "sindarin", "grado": 3, "lengua_materna": false},
+      {"idioma": "quenya", "grado": 1, "lengua_materna": false}
+    ],
+    "enano": [
+      {"idioma": "khuzdul", "grado": 5, "lengua_materna": true},
+      {"idioma": "westron", "grado": 3, "lengua_materna": false},
+      {"idioma": "sindarin", "grado": 1, "lengua_materna": false}
+    ],
+    "elfo_silvano": [
+      {"idioma": "silvano", "grado": 5, "lengua_materna": true},
+      {"idioma": "sindarin", "grado": 5, "lengua_materna": false},
+      {"idioma": "westron", "grado": 2, "lengua_materna": false}
+    ],
+    "alto_elfo": [
+      {"idioma": "quenya", "grado": 5, "lengua_materna": true},
+      {"idioma": "sindarin", "grado": 5, "lengua_materna": false},
+      {"idioma": "westron", "grado": 3, "lengua_materna": false}
+    ],
+    "hobbit": [
+      {"idioma": "westron", "grado": 5, "lengua_materna": true}
+    ],
+    "medio_elfo": [
+      {"idioma": "westron", "grado": 5, "lengua_materna": true},
+      {"idioma": "sindarin", "grado": 3, "lengua_materna": false}
+    ],
+    "orco": [
+      {"idioma": "orquen", "grado": 5, "lengua_materna": true},
+      {"idioma": "westron", "grado": 1, "lengua_materna": false}
+    ],
+    "troll": [
+      {"idioma": "orquen", "grado": 3, "lengua_materna": true}
+    ]
+  },
+  "notas": {
+    "aprendizaje": "Un personaje puede aprender idiomas adicionales durante el juego subiendo su grado en la habilidad 'Conocimiento de Lenguas'.",
+    "lengua_materna": "Un idioma marcado como lengua materna tiene grado 5 y no requiere tiradas para comunicación cotidiana.",
+    "escritura": "Grados 3+ permiten leer y escribir. Grado 2 permite leer frases simples. Grado 1 solo oral básico."
+  }
+}

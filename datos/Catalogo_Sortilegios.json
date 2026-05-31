@@ -1,0 +1,541 @@
+{
+  "meta": {
+    "tabla": "SORTILEGIOS",
+    "nombre": "Catálogo de Sortilegios MERP",
+    "fuente": "Listas de sortilegios del manual MERP (edición española). Listas Abiertas (OA), Listas Cerradas (CA) y Listas Base según profesión.",
+    "clasificacion": {
+      "listas_abiertas": "Disponibles para cualquier profesión con capacidad mágica, pero con coste de desarrollo alto.",
+      "listas_cerradas": "Disponibles para varias profesiones mágicas. Coste de desarrollo medio.",
+      "listas_base": "Exclusivas de la profesión. Coste de desarrollo más bajo (2 o 3)."
+    },
+    "tipos_sortilegio": {
+      "F": "Fuerza — Sortilegios ofensivos directos de ataque elemental.",
+      "U": "Universo — Sortilegios de protección, detección y manipulación de energía.",
+      "P": "Poder — Sortilegios que modifican características o habilidades del objetivo.",
+      "E": "Esencia — Sortilegios de curación, purificación y restauración.",
+      "I": "Ilimitado — Sortilegios de ilusión, influencia mental y control."
+    }
+  },
+  "profesiones": {
+    "mago": {
+      "descripcion": "Lanzador de sortilegios de poder arcano. Usa Listas Abiertas y Cerradas de Magia.",
+      "listas_base": [
+        {
+          "nombre": "Detección Mágica",
+          "descripcion": "Sortilegios para detectar, analizar y rastrear presencias mágicas.",
+          "tipo_lista": "abierta",
+          "circulo_minimo": 1,
+          "sortilegios": [
+            {"nivel": 1, "nombre": "Detectar Magia", "tipo": "U", "alcance": "30m", "duracion": "Concentración", "area": "Cono 30m", "descripcion": "Revela la presencia de magia en el área."},
+            {"nivel": 2, "nombre": "Detectar Invisible", "tipo": "U", "alcance": "10m", "duracion": "1 min/nivel", "area": "Cono 10m", "descripcion": "Revela objetos y criaturas invisibles."},
+            {"nivel": 3, "nombre": "Detectar Enemigo", "tipo": "U", "alcance": "Propio", "duracion": "Concentración", "area": "Radio 50m", "descripcion": "Siente la presencia de criaturas con intenciones hostiles."},
+            {"nivel": 4, "nombre": "Detectar Trampa", "tipo": "U", "alcance": "5m", "duracion": "Instantáneo", "area": "Trampa individual", "descripcion": "Revela la presencia de trampas mecánicas o mágicas."},
+            {"nivel": 5, "nombre": "Analizar Objeto Mágico", "tipo": "U", "alcance": "Toque", "duracion": "1 asalto", "area": "Objeto individual", "descripcion": "Determina las propiedades mágicas de un objeto."},
+            {"nivel": 6, "nombre": "Rastrear Magia", "tipo": "U", "alcance": "Propio", "duracion": "1 hora/nivel", "area": "Radio 100m", "descripcion": "Sigue el rastro de emanaciones mágicas recientes."},
+            {"nivel": 7, "nombre": "Ojo Mágico", "tipo": "U", "alcance": "1 km/nivel", "duracion": "1 min/nivel", "area": "Punto remoto", "descripcion": "Crea un sensor visual mágico en un lugar distante."},
+            {"nivel": 8, "nombre": "Detectar Portales", "tipo": "U", "alcance": "Propio", "duracion": "Concentración", "area": "Radio 100m", "descripcion": "Localiza portales mágicos y planos de transición."},
+            {"nivel": 9, "nombre": "Verdad Mágica", "tipo": "U", "alcance": "Toque", "duracion": "1 asalto", "area": "Documento u objeto", "descripcion": "Revela la historia mágica completa de un objeto."},
+            {"nivel": 10, "nombre": "Visión del Poder", "tipo": "U", "alcance": "Propio", "duracion": "1 minuto", "area": "Radio 500m", "descripcion": "Percibe todas las fuentes de poder mágico en el área."}
+          ]
+        },
+        {
+          "nombre": "Ilusiones",
+          "descripcion": "Sortilegios para crear apariencias falsas y engañar a los sentidos.",
+          "tipo_lista": "abierta",
+          "circulo_minimo": 1,
+          "sortilegios": [
+            {"nivel": 1, "nombre": "Luz Fantasma", "tipo": "I", "alcance": "10m", "duracion": "1 min/nivel", "area": "Punto", "descripcion": "Crea una luz danzante que puede adoptar formas simples."},
+            {"nivel": 2, "nombre": "Sonido Fantasma", "tipo": "I", "alcance": "30m", "duracion": "1 asalto/nivel", "area": "Punto", "descripcion": "Crea sonidos simples (pasos, voces, golpes) en un punto."},
+            {"nivel": 3, "nombre": "Ofuscación", "tipo": "I", "alcance": "Propio", "duracion": "1 min/nivel", "area": "Propio", "descripcion": "Desenfoca la imagen del lanzador, penalizando ataques a distancia -20."},
+            {"nivel": 4, "nombre": "Imagen Ilusoria", "tipo": "I", "alcance": "30m", "duracion": "1 min/nivel", "area": "Radio 10m", "descripcion": "Crea una imagen estática de hasta 3m de lado."},
+            {"nivel": 5, "nombre": "Invisibilidad", "tipo": "I", "alcance": "Toque", "duracion": "1 min/nivel", "area": "Criatura", "descripcion": "Vuelve invisible al objetivo. Atacar rompe el sortilegio."},
+            {"nivel": 6, "nombre": "Ilusión Móvil", "tipo": "I", "alcance": "30m", "duracion": "1 min/nivel", "area": "Radio 10m", "descripcion": "Imagen con movimiento y sonido convincentes."},
+            {"nivel": 7, "nombre": "Espejismo", "tipo": "I", "alcance": "100m", "duracion": "1 hora/nivel", "area": "Radio 50m", "descripcion": "Altera la apariencia de un área extensa (bosque, edificio)."},
+            {"nivel": 8, "nombre": "Ilusión Sensorial Completa", "tipo": "I", "alcance": "30m", "duracion": "1 min/nivel", "area": "Radio 10m", "descripcion": "Engaña a todos los sentidos incluido el tacto."},
+            {"nivel": 9, "nombre": "Sombra Viva", "tipo": "I", "alcance": "10m", "duracion": "1 hora/nivel", "area": "Criatura", "descripcion": "Crea una copia ilusoria que puede seguir órdenes simples."},
+            {"nivel": 10, "nombre": "Realidad Alterna", "tipo": "I", "alcance": "100m", "duracion": "1 hora/nivel", "area": "Radio 100m", "descripcion": "Crea una realidad ilusoria completa y persistente en un área."}
+          ]
+        },
+        {
+          "nombre": "Influencias",
+          "descripcion": "Sortilegios de control mental y manipulación de voluntad.",
+          "tipo_lista": "abierta",
+          "circulo_minimo": 1,
+          "sortilegios": [
+            {"nivel": 1, "nombre": "Persuasión", "tipo": "I", "alcance": "10m", "duracion": "1 asalto", "area": "1 criatura", "descripcion": "+20 a una tirada de Persuasión o Diplomacia."},
+            {"nivel": 2, "nombre": "Sugestión", "tipo": "I", "alcance": "10m", "duracion": "1 asalto", "area": "1 criatura", "descripcion": "Da una orden simple que el objetivo intenta seguir si supera TR."},
+            {"nivel": 3, "nombre": "Confusión", "tipo": "I", "alcance": "30m", "duracion": "1 asalto/nivel", "area": "1 criatura", "descripcion": "El objetivo actúa de forma aleatoria (50% probabilidad de no actuar)."},
+            {"nivel": 4, "nombre": "Dormir", "tipo": "I", "alcance": "30m", "duracion": "1 min/nivel", "area": "1 criatura", "descripcion": "El objetivo cae en un sueño profundo. Niveles bajos o PV < 20."},
+            {"nivel": 5, "nombre": "Miedo", "tipo": "I", "alcance": "10m", "duracion": "1 asalto/nivel", "area": "1 criatura", "descripcion": "El objetivo huye aterrorizado. Tirada de Resistencia para negar."},
+            {"nivel": 6, "nombre": "Calmar", "tipo": "I", "alcance": "30m", "duracion": "1 min/nivel", "area": "Radio 10m", "descripcion": "Calma las emociones en un área. Enemigos pierden agresividad."},
+            {"nivel": 7, "nombre": "Control Mental", "tipo": "I", "alcance": "10m", "duracion": "1 hora/nivel", "area": "1 criatura", "descripcion": "Control total sobre las acciones del objetivo. TR cada hora."},
+            {"nivel": 8, "nombre": "Pánico", "tipo": "I", "alcance": "30m", "duracion": "1 asalto/nivel", "area": "Radio 10m", "descripcion": "Todas las criaturas en el área huyen presas del pánico."},
+            {"nivel": 9, "nombre": "Confusión Masiva", "tipo": "I", "alcance": "50m", "duracion": "1 asalto/nivel", "area": "Radio 20m", "descripcion": "Todas las criaturas en el área actúan aleatoriamente."},
+            {"nivel": 10, "nombre": "Dominación", "tipo": "I", "alcance": "10m", "duracion": "Permanente", "area": "1 criatura", "descripcion": "Control mental permanente. TR diaria para intentar liberarse."}
+          ]
+        },
+        {
+          "nombre": "Protecciones",
+          "descripcion": "Sortilegios defensivos y barreras mágicas.",
+          "tipo_lista": "abierta",
+          "circulo_minimo": 1,
+          "sortilegios": [
+            {"nivel": 1, "nombre": "Escudo", "tipo": "U", "alcance": "Propio", "duracion": "1 min/nivel", "area": "Propio", "descripcion": "Crea un escudo mágico que otorga BD +10."},
+            {"nivel": 2, "nombre": "Armadura Mágica", "tipo": "U", "alcance": "Toque", "duracion": "1 min/nivel", "area": "1 criatura", "descripcion": "Mejora la armadura en +10 contra ataques físicos."},
+            {"nivel": 3, "nombre": "Protección Elemental", "tipo": "U", "alcance": "Toque", "duracion": "1 min/nivel", "area": "1 criatura", "descripcion": "Resistencia +20 contra fuego, frío o electricidad (elegir uno)."},
+            {"nivel": 4, "nombre": "Protección contra Magia", "tipo": "U", "alcance": "Propio", "duracion": "1 min/nivel", "area": "Propio", "descripcion": "TR +20 contra sortilegios."},
+            {"nivel": 5, "nombre": "Burbuja de Aire", "tipo": "U", "alcance": "Toque", "duracion": "1 min/nivel", "area": "Radio 1m", "descripcion": "Crea una burbuja de aire respirable bajo el agua o en veneno."},
+            {"nivel": 6, "nombre": "Reflejos Mágicos", "tipo": "U", "alcance": "Propio", "duracion": "1 asalto/nivel", "area": "Propio", "descripcion": "25% de probabilidad de reflejar un sortilegio de vuelta al lanzador."},
+            {"nivel": 7, "nombre": "Muro de Fuerza", "tipo": "U", "alcance": "10m", "duracion": "1 min/nivel", "area": "Muro 5m×3m", "descripcion": "Muro invisible de fuerza. Absorbe 50 PV de daño antes de caer."},
+            {"nivel": 8, "nombre": "Círculo de Protección", "tipo": "U", "alcance": "Propio", "duracion": "1 hora/nivel", "area": "Radio 3m", "descripcion": "Círculo protector. Impide la entrada física o mágica (+40 TR dentro)."},
+            {"nivel": 9, "nombre": "Inmunidad Elemental", "tipo": "U", "alcance": "Toque", "duracion": "1 min/nivel", "area": "1 criatura", "descripcion": "Inmunidad total a un tipo de daño elemental (fuego, frío, eléctrico)."},
+            {"nivel": 10, "nombre": "Santuario", "tipo": "U", "alcance": "Propio", "duracion": "1 hora/nivel", "area": "Radio 10m", "descripcion": "Área protegida. Ninguna criatura hostil puede entrar sin TR."}
+          ]
+        },
+        {
+          "nombre": "Sonidos",
+          "descripcion": "Sortilegios que manipulan el sonido y las vibraciones.",
+          "tipo_lista": "abierta",
+          "circulo_minimo": 1,
+          "sortilegios": [
+            {"nivel": 1, "nombre": "Amplificar Sonido", "tipo": "U", "alcance": "10m", "duracion": "1 min/nivel", "area": "Punto", "descripcion": "Amplifica sonidos en un punto, audible a 500m."},
+            {"nivel": 2, "nombre": "Silencio", "tipo": "U", "alcance": "10m", "duracion": "1 min/nivel", "area": "Radio 3m", "descripcion": "Absorbe todo el sonido en el área. +30 a Sigilo."},
+            {"nivel": 3, "nombre": "Susurro", "tipo": "U", "alcance": "100m", "duracion": "Instantáneo", "area": "1 criatura", "descripcion": "Envía un mensaje susurrado a una criatura conocida."},
+            {"nivel": 4, "nombre": "Grito Atronador", "tipo": "F", "alcance": "10m", "duracion": "Instantáneo", "area": "Cono", "descripcion": "Onda sónica que causa 3-30 PV y aturde 1 asalto. TR para reducir daño."},
+            {"nivel": 5, "nombre": "Música Encantadora", "tipo": "I", "alcance": "30m", "duracion": "Concentración", "area": "Radio 10m", "descripcion": "Melodía mágica. Los oyentes deben TR o quedan fascinados."},
+            {"nivel": 6, "nombre": "Sonido de Mando", "tipo": "I", "alcance": "50m", "duracion": "1 asalto", "area": "Radio 10m", "descripcion": "Voz amplificada que da órdenes. Subordinados obedecen sin TR."},
+            {"nivel": 7, "nombre": "Escudo Sónico", "tipo": "U", "alcance": "Propio", "duracion": "1 min/nivel", "area": "Propio", "descripcion": "Capa de vibraciones que desvía proyectiles (-30 a ataques a distancia)."},
+            {"nivel": 8, "nombre": "Onda de Choque", "tipo": "F", "alcance": "30m", "duracion": "Instantáneo", "area": "Radio 5m", "descripcion": "Explosión sónica. 5-50 PV a todas las criaturas. TR 1/2 daño."},
+            {"nivel": 9, "nombre": "Sordera", "tipo": "P", "alcance": "10m", "duracion": "Permanente", "area": "1 criatura", "descripcion": "El objetivo queda completamente sordo. TR para negar."},
+            {"nivel": 10, "nombre": "Palabra de Poder", "tipo": "F", "alcance": "10m", "duracion": "Instantáneo", "area": "1 criatura", "descripcion": "Palabra arcana que causa 10-100 PV. TR reduce a la mitad."}
+          ]
+        }
+      ],
+      "listas_cerradas": [
+        {
+          "nombre": "Ley del Fuego",
+          "descripcion": "Sortilegios ofensivos de fuego y calor.",
+          "tipo_lista": "cerrada",
+          "circulo_minimo": 2,
+          "sortilegios": [
+            {"nivel": 2, "nombre": "Chispa", "tipo": "F", "alcance": "10m", "duracion": "Instantáneo", "area": "1 objetivo", "descripcion": "Chispa de fuego. 1-10 PV. Puede encender materiales inflamables."},
+            {"nivel": 3, "nombre": "Llama", "tipo": "F", "alcance": "20m", "duracion": "Instantáneo", "area": "1 objetivo", "descripcion": "Ráfaga de llamas. 2-20 PV. Materiales inflamables arden."},
+            {"nivel": 4, "nombre": "Bola de Fuego", "tipo": "F", "alcance": "50m", "duracion": "Instantáneo", "area": "Radio 5m", "descripcion": "Explosión de fuego. 3-30 PV. TR 1/2 daño."},
+            {"nivel": 5, "nombre": "Muro de Fuego", "tipo": "F", "alcance": "30m", "duracion": "1 min/nivel", "area": "Muro 10m×3m", "descripcion": "Muro de llamas. Atravésarlo causa 4-40 PV."},
+            {"nivel": 6, "nombre": "Rayo Ígneo", "tipo": "F", "alcance": "100m", "duracion": "Instantáneo", "area": "1 objetivo", "descripcion": "Rayo de fuego concentrado. 5-50 PV. Crítico de calor (CT-6)."},
+            {"nivel": 7, "nombre": "Tormenta de Fuego", "tipo": "F", "alcance": "50m", "duracion": "1 asalto/nivel", "area": "Radio 10m", "descripcion": "Lluvia de fuego. 6-60 PV/asalto. TR 1/2 cada asalto."},
+            {"nivel": 8, "nombre": "Explosión Ígnea", "tipo": "F", "alcance": "50m", "duracion": "Instantáneo", "area": "Radio 10m", "descripcion": "Gran explosión. 7-70 PV. TR 1/2. Objetos pueden destruirse."},
+            {"nivel": 9, "nombre": "Llama Viva", "tipo": "F", "alcance": "30m", "duracion": "1 hora/nivel", "area": "Elemental", "descripcion": "Crea un elemental de fuego que obedece al lanzador."},
+            {"nivel": 10, "nombre": "Inferno", "tipo": "F", "alcance": "100m", "duracion": "1 asalto/nivel", "area": "Radio 30m", "descripcion": "Cataclismo de fuego. 10-100 PV/asalto en toda el área."}
+          ]
+        },
+        {
+          "nombre": "Ley del Hielo",
+          "descripcion": "Sortilegios ofensivos de frío y hielo.",
+          "tipo_lista": "cerrada",
+          "circulo_minimo": 2,
+          "sortilegios": [
+            {"nivel": 2, "nombre": "Escarcha", "tipo": "F", "alcance": "10m", "duracion": "Instantáneo", "area": "1 objetivo", "descripcion": "Ráfaga de frío. 1-10 PV. Ralentiza al objetivo 1 asalto."},
+            {"nivel": 3, "nombre": "Proyectil de Hielo", "tipo": "F", "alcance": "30m", "duracion": "Instantáneo", "area": "1 objetivo", "descripcion": "Dardo de hielo. 2-20 PV. Penetra armaduras ligeras."},
+            {"nivel": 4, "nombre": "Niebla Helada", "tipo": "F", "alcance": "30m", "duracion": "1 min/nivel", "area": "Radio 10m", "descripcion": "Niebla gélida. Visibilidad reducida. 2-20 PV/asalto dentro."},
+            {"nivel": 5, "nombre": "Muro de Hielo", "tipo": "F", "alcance": "30m", "duracion": "1 min/nivel", "area": "Muro 10m×3m", "descripcion": "Muro de hielo. 50 PV de dureza. Atravésarlo causa 3-30 PV de frío."},
+            {"nivel": 6, "nombre": "Rayo de Hielo", "tipo": "F", "alcance": "100m", "duracion": "Instantáneo", "area": "1 objetivo", "descripcion": "Rayo de frío extremo. 4-40 PV. Crítico de frío (CT-7)."},
+            {"nivel": 7, "nombre": "Tormenta de Hielo", "tipo": "F", "alcance": "50m", "duracion": "1 asalto/nivel", "area": "Radio 10m", "descripcion": "Granizo y hielo. 5-50 PV/asalto. Ralentiza movimiento."},
+            {"nivel": 8, "nombre": "Explosión Glacial", "tipo": "F", "alcance": "50m", "duracion": "Instantáneo", "area": "Radio 10m", "descripcion": "Explosión de hielo. 6-60 PV. TR 1/2. Congela el suelo."},
+            {"nivel": 9, "nombre": "Golem de Hielo", "tipo": "F", "alcance": "10m", "duracion": "1 hora/nivel", "area": "Golem", "descripcion": "Crea un golem de hielo de 3m que obedece al lanzador."},
+            {"nivel": 10, "nombre": "Invierno Eterno", "tipo": "F", "alcance": "100m", "duracion": "1 hora/nivel", "area": "Radio 50m", "descripcion": "Clima de hielo permanente en el área. 8-80 PV/asalto a los no protegidos."}
+          ]
+        },
+        {
+          "nombre": "Ley del Rayo",
+          "descripcion": "Sortilegios de electricidad y relámpagos.",
+          "tipo_lista": "cerrada",
+          "circulo_minimo": 3,
+          "sortilegios": [
+            {"nivel": 3, "nombre": "Chispa Eléctrica", "tipo": "F", "alcance": "10m", "duracion": "Instantáneo", "area": "1 objetivo", "descripcion": "Descarga eléctrica. 1-10 PV. Aturde 1 asalto."},
+            {"nivel": 4, "nombre": "Descarga", "tipo": "F", "alcance": "30m", "duracion": "Instantáneo", "area": "1 objetivo", "descripcion": "Arco eléctrico. 2-20 PV. TR o aturdido 1 asalto."},
+            {"nivel": 5, "nombre": "Rayo de Descarga", "tipo": "F", "alcance": "100m", "duracion": "Instantáneo", "area": "1 objetivo", "descripcion": "Relámpago. 3-30 PV. Crítico de electricidad (CT-8). TR 1/2."},
+            {"nivel": 6, "nombre": "Campo Eléctrico", "tipo": "F", "alcance": "Propio", "duracion": "1 min/nivel", "area": "Radio 3m", "descripcion": "Campo de electricidad alrededor del lanzador. 4-40 PV al contacto."},
+            {"nivel": 7, "nombre": "Cadena de Relámpagos", "tipo": "F", "alcance": "50m", "duracion": "Instantáneo", "area": "10 objetivos", "descripcion": "Rayo que salta entre enemigos. 4-40 PV cada uno."},
+            {"nivel": 8, "nombre": "Tormenta Eléctrica", "tipo": "F", "alcance": "100m", "duracion": "1 asalto/nivel", "area": "Radio 20m", "descripcion": "Descargas continuas. 5-50 PV/asalto. TR 1/2 cada asalto."},
+            {"nivel": 9, "nombre": "Electrocutar", "tipo": "F", "alcance": "50m", "duracion": "1 asalto", "area": "1 objetivo", "descripcion": "Descarga sostenida. 6-60 PV/asalto. Paraliza si TR falla."},
+            {"nivel": 10, "nombre": "Tormenta Perfecta", "tipo": "F", "alcance": "200m", "duracion": "1 min/nivel", "area": "Radio 50m", "descripcion": "Tormenta eléctrica masiva. 8-80 PV/asalto. Oscuridad total."}
+          ]
+        },
+        {
+          "nombre": "Manipulación de la Luz",
+          "descripcion": "Sortilegios que manipulan la luz visible y la oscuridad.",
+          "tipo_lista": "cerrada",
+          "circulo_minimo": 2,
+          "sortilegios": [
+            {"nivel": 2, "nombre": "Luz", "tipo": "U", "alcance": "10m", "duracion": "1 min/nivel", "area": "Punto", "descripcion": "Crea una luz brillante que ilumina 10m a la redonda."},
+            {"nivel": 3, "nombre": "Oscuridad", "tipo": "U", "alcance": "10m", "duracion": "1 min/nivel", "area": "Radio 5m", "descripcion": "Crea oscuridad mágica que ni la visión nocturna penetra."},
+            {"nivel": 4, "nombre": "Destello Cegador", "tipo": "F", "alcance": "30m", "duracion": "Instantáneo", "area": "Cono 10m", "descripcion": "Destello de luz intensa. Ciega 1 asalto. TR para negar."},
+            {"nivel": 5, "nombre": "Luz Solar", "tipo": "U", "alcance": "50m", "duracion": "1 min/nivel", "area": "Radio 10m", "descripcion": "Crea luz solar verdadera. Daña a criaturas sensibles al sol."},
+            {"nivel": 6, "nombre": "Imagen Reflectante", "tipo": "U", "alcance": "Propio", "duracion": "1 asalto/nivel", "area": "Propio", "descripcion": "Crea 3 copias ilusorias del lanzador. 75% de ataque falla."},
+            {"nivel": 7, "nombre": "Oscuridad Profunda", "tipo": "U", "alcance": "30m", "duracion": "1 hora/nivel", "area": "Radio 10m", "descripcion": "Oscuridad total que ni la magia puede penetrar fácilmente."},
+            {"nivel": 8, "nombre": "Rayos de Luz", "tipo": "F", "alcance": "50m", "duracion": "1 asalto/nivel", "area": "1 objetivo/asalto", "descripcion": "Rayos luminosos. 4-40 PV. TR 1/2. Ciegas si TR falla."},
+            {"nivel": 9, "nombre": "Prisma de Poder", "tipo": "F", "alcance": "50m", "duracion": "Instantáneo", "area": "Radio 5m", "descripcion": "Explosión prismática. Efecto aleatorio (fuego, frío, electricidad, luz). 5-50 PV."},
+            {"nivel": 10, "nombre": "Luz de la Creación", "tipo": "U", "alcance": "Propio", "duracion": "Instantáneo", "area": "Radio 50m", "descripcion": "Explosión de luz divina. 10-100 PV a criaturas oscuras. Cura 5-50 PV a aliados."}
+          ]
+        },
+        {
+          "nombre": "Tormenta de Tierra",
+          "descripcion": "Sortilegios de manipulación de tierra y roca.",
+          "tipo_lista": "cerrada",
+          "circulo_minimo": 3,
+          "sortilegios": [
+            {"nivel": 3, "nombre": "Pedrada", "tipo": "F", "alcance": "10m", "duracion": "Instantáneo", "area": "1 objetivo", "descripcion": "Proyectil de piedra. 1-10 PV."},
+            {"nivel": 4, "nombre": "Arena Cegadora", "tipo": "F", "alcance": "20m", "duracion": "Instantáneo", "area": "Cono 5m", "descripcion": "Ráfaga de arena. Ciega 1-2 asaltos. TR para negar."},
+            {"nivel": 5, "nombre": "Muro de Piedra", "tipo": "U", "alcance": "30m", "duracion": "Permanente", "area": "Muro 5m×3m", "descripcion": "Muro de piedra de 30cm de grosor. 100 PV de dureza."},
+            {"nivel": 6, "nombre": "Terremoto", "tipo": "F", "alcance": "50m", "duracion": "1 asalto", "area": "Radio 10m", "descripcion": "Sacudida sísmica. Criaturas caen. 3-30 PV de aplastamiento."},
+            {"nivel": 7, "nombre": "Lluvia de Rocas", "tipo": "F", "alcance": "100m", "duracion": "1 asalto/nivel", "area": "Radio 10m", "descripcion": "rocas del cielo. 4-40 PV/asalto. TR 1/2."},
+            {"nivel": 8, "nombre": "Foso", "tipo": "U", "alcance": "50m", "duracion": "Permanente", "area": "5m×5m", "descripcion": "Abre un foso de 5m de profundidad bajo el objetivo."},
+            {"nivel": 9, "nombre": "Golem de Roca", "tipo": "U", "alcance": "10m", "duracion": "1 hora/nivel", "area": "Golem", "descripcion": "Crea un golem de piedra de 3m que obedece al lanzador."},
+            {"nivel": 10, "nombre": "Cataclismo", "tipo": "F", "alcance": "200m", "duracion": "Instantáneo", "area": "Radio 30m", "descripcion": "Terremoto masivo. 8-80 PV. Edificios colapsan. TR 1/2 daño."}
+          ]
+        }
+      ]
+    },
+    "animista": {
+      "descripcion": "Lanzador de sortilegios de la naturaleza. Usa magia basada en plantas, animales y curación.",
+      "listas_base": [
+        {
+          "nombre": "Dominio Animal",
+          "descripcion": "Sortilegios para comunicarse, controlar y comprender animales.",
+          "tipo_lista": "abierta",
+          "circulo_minimo": 1,
+          "sortilegios": [
+            {"nivel": 1, "nombre": "Hablar con Animales", "tipo": "I", "alcance": "Propio", "duracion": "1 min/nivel", "area": "Propio", "descripcion": "Comprende y se comunica con animales normales."},
+            {"nivel": 2, "nombre": "Calmar Animal", "tipo": "I", "alcance": "10m", "duracion": "1 min/nivel", "area": "1 animal", "descripcion": "Calma a un animal hostil. TR si es provocado."},
+            {"nivel": 3, "nombre": "Sentidos Animales", "tipo": "P", "alcance": "Toque", "duracion": "1 min/nivel", "area": "1 animal", "descripcion": "Comparte los sentidos de un animal (olfato, oído, vista)."},
+            {"nivel": 4, "nombre": "Controlar Animal", "tipo": "I", "alcance": "10m", "duracion": "1 min/nivel", "area": "1 animal", "descripcion": "Controla las acciones de un animal. TR para negar."},
+            {"nivel": 5, "nombre": "Montura Salvaje", "tipo": "P", "alcance": "Toque", "duracion": "1 hora/nivel", "area": "1 animal", "descripcion": "Doma un animal salvaje y lo convierte en montura."},
+            {"nivel": 6, "nombre": "Invocar Animal", "tipo": "U", "alcance": "100m", "duracion": "1 hora/nivel", "area": "1 animal", "descripcion": "Llama a un animal específico en un radio de 1 km."},
+            {"nivel": 7, "nombre": "Manada", "tipo": "I", "alcance": "50m", "duracion": "1 hora/nivel", "area": "10 animales", "descripcion": "Controla un grupo de animales del mismo tipo."},
+            {"nivel": 8, "nombre": "Forma Animal", "tipo": "P", "alcance": "Propio", "duracion": "1 hora/nivel", "area": "Propio", "descripcion": "Se transforma en un animal de hasta tamaño grande."},
+            {"nivel": 9, "nombre": "Compañero Animal", "tipo": "P", "alcance": "Toque", "duracion": "Permanente", "area": "1 animal", "descripcion": "Vincula a un animal como compañero leal. +20 a todas sus habilidades."},
+            {"nivel": 10, "nombre": "Señor de las Bestias", "tipo": "I", "alcance": "100m", "duracion": "1 hora/nivel", "area": "Radio 100m", "descripcion": "Controla todos los animales en el área. Ninguna bestia te ataca."}
+          ]
+        },
+        {
+          "nombre": "Dominio Vegetal",
+          "descripcion": "Sortilegios para manipular plantas y vegetación.",
+          "tipo_lista": "abierta",
+          "circulo_minimo": 1,
+          "sortilegios": [
+            {"nivel": 1, "nombre": "Hablar con Plantas", "tipo": "I", "alcance": "Propio", "duracion": "1 min/nivel", "area": "Radio 10m", "descripcion": "Comprende el estado y necesidades de las plantas cercanas."},
+            {"nivel": 2, "nombre": "Hacer Crecible", "tipo": "P", "alcance": "10m", "duracion": "Instantáneo", "area": "3m cúbicos", "descripcion": "Acelera el crecimiento de plantas. Crea vegetación densa."},
+            {"nivel": 3, "nombre": "Enredaderas", "tipo": "F", "alcance": "30m", "duracion": "1 min/nivel", "area": "Radio 5m", "descripcion": "Enredaderas atrapan a las criaturas en el área. TR para liberarse."},
+            {"nivel": 4, "nombre": "Espinas", "tipo": "F", "alcance": "10m", "duracion": "1 min/nivel", "area": "4m cúbicos", "descripcion": "Crea arbustos espinosos. 1-10 PV al atravesarlos."},
+            {"nivel": 5, "nombre": "Puente Vegetal", "tipo": "U", "alcance": "50m", "duracion": "1 min/nivel", "area": "Pasarela 5m", "descripcion": "Plantas forman un puente sólido para cruzar."},
+            {"nivel": 6, "nombre": "Muro de Espinas", "tipo": "F", "alcance": "30m", "duracion": "1 min/nivel", "area": "Muro 10m×3m", "descripcion": "Muro de espinas. 3-30 PV al atravesarlo. TR para liberarse si queda atrapado."},
+            {"nivel": 7, "nombre": "Bosque Temporal", "tipo": "U", "alcance": "100m", "duracion": "1 hora/nivel", "area": "Radio 50m", "descripcion": "Crea un bosque denso en un área abierta."},
+            {"nivel": 8, "nombre": "Curar Planta", "tipo": "E", "alcance": "Toque", "duracion": "Instantáneo", "area": "1 planta", "descripcion": "Cura enfermedades y plagas de una planta o árbol."},
+            {"nivel": 9, "nombre": "Ent", "tipo": "U", "alcance": "50m", "duracion": "1 hora/nivel", "area": "1 árbol", "descripcion": "Despierta un árbol como Ent menor que obedece al lanzador."},
+            {"nivel": 10, "nombre": "Furia de la Naturaleza", "tipo": "F", "alcance": "200m", "duracion": "1 asalto/nivel", "area": "Radio 50m", "descripcion": "La vegetación ataca a todos los enemigos en el área. 5-50 PV/asalto."}
+          ]
+        },
+        {
+          "nombre": "Control del Clima",
+          "descripcion": "Sortilegios para influir en las condiciones meteorológicas.",
+          "tipo_lista": "abierta",
+          "circulo_minimo": 2,
+          "sortilegios": [
+            {"nivel": 2, "nombre": "Predecir Clima", "tipo": "U", "alcance": "Propio", "duracion": "Instantáneo", "area": "Propio", "descripcion": "Conoce el clima para las próximas 24 horas con precisión."},
+            {"nivel": 3, "nombre": "Niebla", "tipo": "U", "alcance": "50m", "duracion": "1 min/nivel", "area": "Radio 20m", "descripcion": "Crea niebla densa que reduce la visibilidad a 3m."},
+            {"nivel": 4, "nombre": "Viento", "tipo": "U", "alcance": "100m", "duracion": "1 min/nivel", "area": "Radio 50m", "descripcion": "Crea viento fuerte. Penaliza proyectiles -20."},
+            {"nivel": 5, "nombre": "Lluvia", "tipo": "U", "alcance": "100m", "duracion": "1 hora/nivel", "area": "Radio 100m", "descripcion": "Convoca lluvia moderada. Apaga fuegos, reduce visibilidad."},
+            {"nivel": 6, "nombre": "Tormenta", "tipo": "U", "alcance": "500m", "duracion": "1 hora/nivel", "area": "Radio 500m", "descripcion": "Tormenta con lluvia intensa, rayos y viento fuerte."},
+            {"nivel": 7, "nombre": "Calma", "tipo": "U", "alcance": "100m", "duracion": "1 min/nivel", "area": "Radio 50m", "descripcion": "Calma total. Sin viento, lluvia, nieve ni tormentas en el área."},
+            {"nivel": 8, "nombre": "Tormenta de Nieve", "tipo": "F", "alcance": "500m", "duracion": "1 hora/nivel", "area": "Radio 500m", "descripcion": "Ventisca. 2-20 PV/asalto de frío. Visibilidad 1m. Navegación imposible."},
+            {"nivel": 9, "nombre": "Huracán", "tipo": "F", "alcance": "1 km", "duracion": "1 hora/nivel", "area": "Radio 1 km", "descripcion": "Vientos huracanados. 4-40 PV/asalto de impacto. Edificios dañados."},
+            {"nivel": 10, "nombre": "Clima Perfecto", "tipo": "U", "alcance": "Propio", "duracion": "1 día/nivel", "area": "Radio 5 km", "descripcion": "Establece el clima deseado en una región extensa."}
+          ]
+        },
+        {
+          "nombre": "Curación y Hierbas",
+          "descripcion": "Sortilegios de curación y conocimiento de hierbas.",
+          "tipo_lista": "abierta",
+          "circulo_minimo": 1,
+          "sortilegios": [
+            {"nivel": 1, "nombre": "Primeros Auxilios", "tipo": "E", "alcance": "Toque", "duracion": "Instantáneo", "area": "1 criatura", "descripcion": "Cura 1-10 PV. Estabiliza a moribundos."},
+            {"nivel": 2, "nombre": "Identificar Hierba", "tipo": "U", "alcance": "Toque", "duracion": "Instantáneo", "area": "1 planta", "descripcion": "Identifica plantas y sus propiedades medicinales."},
+            {"nivel": 3, "nombre": "Curación Leve", "tipo": "E", "alcance": "Toque", "duracion": "Instantáneo", "area": "1 criatura", "descripcion": "Cura 2-20 PV."},
+            {"nivel": 4, "nombre": "Curar Enfermedad", "tipo": "E", "alcance": "Toque", "duracion": "Instantáneo", "area": "1 criatura", "descripcion": "Cura una enfermedad natural o mágica."},
+            {"nivel": 5, "nombre": "Curación Moderada", "tipo": "E", "alcance": "Toque", "duracion": "Instantáneo", "area": "1 criatura", "descripcion": "Cura 3-30 PV."},
+            {"nivel": 6, "nombre": "Curar Veneno", "tipo": "E", "alcance": "Toque", "duracion": "Instantáneo", "area": "1 criatura", "descripcion": "Neutraliza venenos naturales y la mayoría de los mágicos."},
+            {"nivel": 7, "nombre": "Curación Grave", "tipo": "E", "alcance": "Toque", "duracion": "Instantáneo", "area": "1 criatura", "descripcion": "Cura 4-40 PV."},
+            {"nivel": 8, "nombre": "Regeneración", "tipo": "E", "alcance": "Toque", "duracion": "Instantáneo", "area": "1 criatura", "descripcion": "Regenera miembros perdidos y órganos dañados."},
+            {"nivel": 9, "nombre": "Curación Mayor", "tipo": "E", "alcance": "Toque", "duracion": "Instantáneo", "area": "1 criatura", "descripcion": "Cura 5-50 PV. También cura enfermedades mágicas."},
+            {"nivel": 10, "nombre": "Resurrección", "tipo": "E", "alcance": "Toque", "duracion": "Instantáneo", "area": "1 criatura", "descripcion": "Devuelve la vida a un ser muerto hace menos de 1 día por nivel."}
+          ]
+        },
+        {
+          "nombre": "Movimiento Natural",
+          "descripcion": "Sortilegios que mejoran el movimiento y la agilidad.",
+          "tipo_lista": "abierta",
+          "circulo_minimo": 1,
+          "sortilegios": [
+            {"nivel": 1, "nombre": "Zancada", "tipo": "P", "alcance": "Toque", "duracion": "1 min/nivel", "area": "1 criatura", "descripcion": "Aumenta el movimiento en +5m/asalto."},
+            {"nivel": 2, "nombre": "Paso Silencioso", "tipo": "P", "alcance": "Toque", "duracion": "1 min/nivel", "area": "1 criatura", "descripcion": "+30 a Sigilo mientras se mueve."},
+            {"nivel": 3, "nombre": "Trepar como un Mono", "tipo": "P", "alcance": "Toque", "duracion": "1 min/nivel", "area": "1 criatura", "descripcion": "+30 a Trepar. Puede trepar superficies lisas."},
+            {"nivel": 4, "nombre": "Nadar como un Pez", "tipo": "P", "alcance": "Toque", "duracion": "1 min/nivel", "area": "1 criatura", "descripcion": "+30 a Nadar. Puede respirar bajo el agua."},
+            {"nivel": 5, "nombre": "Saltar como un Venado", "tipo": "P", "alcance": "Toque", "duracion": "1 min/nivel", "area": "1 criatura", "descripcion": "+50 a Saltar. Distancia y altura triplicadas."},
+            {"nivel": 6, "nombre": "Agravación Reducida", "tipo": "P", "alcance": "Toque", "duracion": "1 hora/nivel", "area": "1 criatura", "descripcion": "Penalizaciones por terreno difícil se reducen a la mitad."},
+            {"nivel": 7, "nombre": "Vuelo", "tipo": "P", "alcance": "Toque", "duracion": "1 min/nivel", "area": "1 criatura", "descripcion": "Concede la capacidad de volar a 20m/asalto."},
+            {"nivel": 8, "nombre": "Pasos de Gigante", "tipo": "P", "alcance": "Toque", "duracion": "1 min/nivel", "area": "1 criatura", "descripcion": "Movimiento x3. Puede caminar sobre obstáculos de hasta 3m."},
+            {"nivel": 9, "nombre": "Aire Libre", "tipo": "P", "alcance": "Propio", "duracion": "1 hora/nivel", "area": "Propio", "descripcion": "Los elementos naturales no te afectan (viento, lluvia, nieve, calor, frío)."},
+            {"nivel": 10, "nombre": "Maestro del Movimiento", "tipo": "P", "alcance": "Toque", "duracion": "1 hora/nivel", "area": "1 criatura", "descripcion": "+50 a todas las habilidades de movimiento. Movimiento x2."}
+          ]
+        }
+      ],
+      "listas_cerradas": [
+        {
+          "nombre": "Purificación",
+          "descripcion": "Sortilegios para purificar agua, comida y lugares.",
+          "tipo_lista": "cerrada",
+          "circulo_minimo": 2,
+          "sortilegios": [
+            {"nivel": 2, "nombre": "Purificar Agua", "tipo": "E", "alcance": "Toque", "duracion": "Instantáneo", "area": "10 litros", "descripcion": "Limpia agua contaminada o envenenada."},
+            {"nivel": 3, "nombre": "Purificar Comida", "tipo": "E", "alcance": "Toque", "duracion": "Instantáneo", "area": "10 kg", "descripcion": "Limpia comida podrida o envenenada."},
+            {"nivel": 4, "nombre": "Santificar Lugar", "tipo": "U", "alcance": "Propio", "duracion": "1 día/nivel", "area": "Radio 10m", "descripcion": "Purifica un área de energías negativas o corruptas."},
+            {"nivel": 5, "nombre": "Purificar Aire", "tipo": "E", "alcance": "10m", "duracion": "Instantáneo", "area": "Radio 5m", "descripcion": "Limpia el aire de gases venenosos, humo y esporas."},
+            {"nivel": 6, "nombre": "Exorcismo", "tipo": "U", "alcance": "Toque", "duracion": "Instantáneo", "area": "1 criatura", "descripcion": "Expulsa espíritus y posesiones sobrenaturales."},
+            {"nivel": 7, "nombre": "Purificar Sangre", "tipo": "E", "alcance": "Toque", "duracion": "Instantáneo", "area": "1 criatura", "descripcion": "Limpia la sangre de venenos y enfermedades."},
+            {"nivel": 8, "nombre": "Limpieza de Aura", "tipo": "U", "alcance": "Toque", "duracion": "Instantáneo", "area": "1 criatura", "descripcion": "Elimina maldiciones mágicas del objetivo."},
+            {"nivel": 9, "nombre": "Zona Sagrada", "tipo": "U", "alcance": "Propio", "duracion": "1 día/nivel", "area": "Radio 50m", "descripcion": "Área consagrada. Los no muertos y criaturas oscuras no pueden entrar."},
+            {"nivel": 10, "nombre": "Renovación", "tipo": "E", "alcance": "Toque", "duracion": "Permanente", "area": "Lugar", "descripcion": "Restaura un lugar corrupto a su estado natural."}
+          ]
+        },
+        {
+          "nombre": "Curación de Huesos",
+          "descripcion": "Sortilegios especializados en reparar huesos y músculos.",
+          "tipo_lista": "cerrada",
+          "circulo_minimo": 2,
+          "sortilegios": [
+            {"nivel": 2, "nombre": "Entablillar", "tipo": "E", "alcance": "Toque", "duracion": "Instantáneo", "area": "1 criatura", "descripcion": "Inmoviliza una fractura. Elimina dolor y penalización por hueso roto."},
+            {"nivel": 3, "nombre": "Calmar Músculo", "tipo": "E", "alcance": "Toque", "duracion": "1 hora/nivel", "area": "1 criatura", "descripcion": "Elimina calambres y tirones musculares."},
+            {"nivel": 4, "nombre": "Soldar Hueso", "tipo": "E", "alcance": "Toque", "duracion": "Instantáneo", "area": "1 criatura", "descripcion": "Suelda una fractura simple. Cura 1-10 PV."},
+            {"nivel": 5, "nombre": "Reparar Músculo", "tipo": "E", "alcance": "Toque", "duracion": "Instantáneo", "area": "1 criatura", "descripcion": "Repara desgarros musculares. Cura 2-20 PV."},
+            {"nivel": 6, "nombre": "Fortalecer Hueso", "tipo": "E", "alcance": "Toque", "duracion": "1 día/nivel", "area": "1 criatura", "descripcion": "Huesos +20 contra rotura. +10 a ataques de impacto."},
+            {"nivel": 7, "nombre": "Regenerar Hueso", "tipo": "E", "alcance": "Toque", "duracion": "1 minuto", "area": "1 criatura", "descripcion": "Regenera huesos perdidos o destruidos."},
+            {"nivel": 8, "nombre": "Estructura Ósea Reforzada", "tipo": "P", "alcance": "Toque", "duracion": "1 hora/nivel", "area": "1 criatura", "descripcion": "Reduce todo daño de impacto en -20."},
+            {"nivel": 9, "nombre": "Curación Ósea Total", "tipo": "E", "alcance": "Toque", "duracion": "Instantáneo", "area": "1 criatura", "descripcion": "Cura todas las fracturas y daños óseos."},
+            {"nivel": 10, "nombre": "Esqueleto de Acero", "tipo": "P", "alcance": "Toque", "duracion": "1 hora/nivel", "area": "1 criatura", "descripcion": "Huesos indestructibles. Inmune a críticos de aplastamiento."}
+          ]
+        },
+        {
+          "nombre": "Control de Plagas",
+          "descripcion": "Sortilegios para controlar insectos y pequeñas criaturas.",
+          "tipo_lista": "cerrada",
+          "circulo_minimo": 3,
+          "sortilegios": [
+            {"nivel": 3, "nombre": "Ahuyentar Insectos", "tipo": "U", "alcance": "Propio", "duracion": "1 hora/nivel", "area": "Radio 3m", "descripcion": "Los insectos comunes evitan el área."},
+            {"nivel": 4, "nombre": "Enjambre", "tipo": "F", "alcance": "30m", "duracion": "1 min/nivel", "area": "Radio 3m", "descripcion": "Convoca un enjambre de insectos. 1-10 PV/asalto. Penetra armaduras."},
+            {"nivel": 5, "nombre": "Plaga", "tipo": "F", "alcance": "100m", "duracion": "1 hora/nivel", "area": "Radio 50m", "descripcion": "Plaga de langostas. Destruye cosechas. Penaliza concentración -30."},
+            {"nivel": 6, "nombre": "Insectos Voraces", "tipo": "F", "alcance": "30m", "duracion": "1 min/nivel", "area": "Radio 5m", "descripcion": "Insectos devoradores. 2-20 PV/asalto. Dañan equipo de cuero y madera."},
+            {"nivel": 7, "nombre": "Nube de Mosquitos", "tipo": "F", "alcance": "30m", "duracion": "1 min/nivel", "area": "Radio 3m", "descripcion": "Nube densa. Ciega (-50 a ataques). 1-10 PV/asalto."},
+            {"nivel": 8, "nombre": "Peste", "tipo": "P", "alcance": "50m", "duracion": "1 día/nivel", "area": "Radio 100m", "descripcion": "Insectos portan enfermedad. TR cada hora o contraer peste."},
+            {"nivel": 9, "nombre": "Enjambre Colosal", "tipo": "F", "alcance": "100m", "duracion": "1 hora/nivel", "area": "Radio 50m", "descripcion": "Enjambre masivo. 4-40 PV/asalto. Devasta la zona."},
+            {"nivel": 10, "nombre": "Señor de los Insectos", "tipo": "I", "alcance": "200m", "duracion": "1 hora/nivel", "area": "Radio 200m", "descripcion": "Controla todos los insectos en el área. Pueden ejecutar órdenes complejas."}
+          ]
+        }
+      ]
+    },
+    "montaraz": {
+      "descripcion": "Superviviente de las tierras salvajes. Magia limitada de la naturaleza y movimiento.",
+      "listas_base": [
+        {
+          "nombre": "Caminos Silenciosos",
+          "descripcion": "Sortilegios de movimiento sigiloso y exploración.",
+          "tipo_lista": "abierta",
+          "circulo_minimo": 1,
+          "sortilegios": [
+            {"nivel": 1, "nombre": "Paso Ligero", "tipo": "P", "alcance": "Propio", "duracion": "1 min/nivel", "area": "Propio", "descripcion": "No deja huellas ni rastros de su paso."},
+            {"nivel": 2, "nombre": "Olfato Agudo", "tipo": "P", "alcance": "Propio", "duracion": "1 min/nivel", "area": "Propio", "descripcion": "Puede rastrear por olfato como un animal."},
+            {"nivel": 3, "nombre": "Ver en Oscuridad", "tipo": "P", "alcance": "Propio", "duracion": "1 min/nivel", "area": "Propio", "descripcion": "Visión nocturna perfecta hasta 30m."},
+            {"nivel": 4, "nombre": "Sigilo Natural", "tipo": "P", "alcance": "Propio", "duracion": "1 min/nivel", "area": "Propio", "descripcion": "+30 a Sigilo en entornos naturales."},
+            {"nivel": 5, "nombre": "Paso del Cazador", "tipo": "P", "alcance": "Propio", "duracion": "1 hora/nivel", "area": "Propio", "descripcion": "No activa trampas ni alarmas naturales."},
+            {"nivel": 6, "nombre": "Sombras del Bosque", "tipo": "P", "alcance": "Propio", "duracion": "1 hora/nivel", "area": "Propio", "descripcion": "Se mimetiza con el entorno natural. +40 a Sigilo."},
+            {"nivel": 7, "nombre": "Viento Favorable", "tipo": "P", "alcance": "Propio", "duracion": "1 hora/nivel", "area": "Radio 10m", "descripcion": "El viento siempre está a favor, ocultando tu olor y sonido."},
+            {"nivel": 8, "nombre": "Desvanecerse", "tipo": "P", "alcance": "Propio", "duracion": "1 min/nivel", "area": "Propio", "descripcion": "Invisibilidad parcial en entornos naturales. +50 a Sigilo."},
+            {"nivel": 9, "nombre": "Sombras Vivas", "tipo": "P", "alcance": "Propio", "duracion": "1 hora/nivel", "area": "Propio", "descripcion": "Puede moverse entre las sombras. Teletransporte entre sombras a 100m."},
+            {"nivel": 10, "nombre": "Uno con el Bosque", "tipo": "P", "alcance": "Propio", "duracion": "1 hora/nivel", "area": "Propio", "descripcion": "Completamente invisible e indetectable en la naturaleza. Los animales no te perciben."}
+          ]
+        },
+        {
+          "nombre": "Caminos del Cazador",
+          "descripcion": "Sortilegios de rastreo y conocimiento del terreno.",
+          "tipo_lista": "abierta",
+          "circulo_minimo": 1,
+          "sortilegios": [
+            {"nivel": 1, "nombre": "Rastrear Presa", "tipo": "U", "alcance": "Propio", "duracion": "1 hora/nivel", "area": "Propio", "descripcion": "+30 a Rastrear. Puede seguir rastros de hasta 1 día de antigüedad."},
+            {"nivel": 2, "nombre": "Dirección Verdadera", "tipo": "U", "alcance": "Propio", "duracion": "Instantáneo", "area": "Propio", "descripcion": "Siempre sabe dónde está el norte."},
+            {"nivel": 3, "nombre": "Leer Terreno", "tipo": "U", "alcance": "Propio", "duracion": "Instantáneo", "area": "Radio 100m", "descripcion": "Conoce la geografía y peligros naturales del área."},
+            {"nivel": 4, "nombre": "Rastro de Sangre", "tipo": "U", "alcance": "Propio", "duracion": "1 hora/nivel", "area": "Propio", "descripcion": "Puede seguir rastros de sangre de hasta 1 semana."},
+            {"nivel": 5, "nombre": "Acechar", "tipo": "P", "alcance": "Propio", "duracion": "1 min/nivel", "area": "Propio", "descripcion": "Emboscar +30 mientras se mueve."},
+            {"nivel": 6, "nombre": "Ojo del Halcón", "tipo": "P", "alcance": "Propio", "duracion": "1 min/nivel", "area": "Propio", "descripcion": "Visión lejana x3. Puede ver detalles a 500m."},
+            {"nivel": 7, "nombre": "Memoria del Terreno", "tipo": "U", "alcance": "Propio", "duracion": "Instantáneo", "area": "Radio 1 km", "descripcion": "Conoce cada detalle del terreno como si hubiera estado antes."},
+            {"nivel": 8, "nombre": "Rastro Mágico", "tipo": "U", "alcance": "Propio", "duracion": "1 hora/nivel", "area": "Propio", "descripcion": "Sigue rastros de criaturas mágicas y sobrenaturales."},
+            {"nivel": 9, "nombre": "Mapa Mental", "tipo": "U", "alcance": "Propio", "duracion": "Instantáneo", "area": "Radio 10 km", "descripcion": "Crea un mapa mental completo de la región."},
+            {"nivel": 10, "nombre": "Territorio Conocido", "tipo": "U", "alcance": "Propio", "duracion": "1 día", "area": "Radio 10 km", "descripcion": "Sabe todo lo que ocurre en su territorio. Movimiento x2 dentro de él."}
+          ]
+        },
+        {
+          "nombre": "Camino del Animal",
+          "descripcion": "Sortilegios de vínculo con animales.",
+          "tipo_lista": "abierta",
+          "circulo_minimo": 2,
+          "sortilegios": [
+            {"nivel": 2, "nombre": "Compañero de Caza", "tipo": "I", "alcance": "Propio", "duracion": "1 hora/nivel", "area": "Propio", "descripcion": "Un animal salvaje te sigue y ayuda en la caza."},
+            {"nivel": 3, "nombre": "Mensaje Animal", "tipo": "U", "alcance": "1 km", "duracion": "1 hora", "area": "1 animal", "descripcion": "Un animal lleva un mensaje a un destino."},
+            {"nivel": 4, "nombre": "Ojos del Lobo", "tipo": "P", "alcance": "Propio", "duracion": "1 min/nivel", "area": "Propio", "descripcion": "Comparte la visión con un animal aliado."},
+            {"nivel": 5, "nombre": "Llamar Presa", "tipo": "I", "alcance": "1 km", "duracion": "Concentración", "area": "1 tipo animal", "descripcion": "Atrae a un tipo específico de animal."},
+            {"nivel": 6, "nombre": "Furia del Lobo", "tipo": "P", "alcance": "Propio", "duracion": "1 min/nivel", "area": "Propio", "descripcion": "Gana +20 a ataques y +10 a daño. Sentidos de lobo."},
+            {"nivel": 7, "nombre": "Manada de Lobos", "tipo": "U", "alcance": "1 km", "duracion": "1 hora/nivel", "area": "5 lobos", "descripcion": "Convoca una manada de lobos que te obedece."},
+            {"nivel": 8, "nombre": "Forma de Lobo", "tipo": "P", "alcance": "Propio", "duracion": "1 hora/nivel", "area": "Propio", "descripcion": "Se transforma en un lobo grande."},
+            {"nivel": 9, "nombre": "Compañero Legendario", "tipo": "P", "alcance": "Toque", "duracion": "Permanente", "area": "1 animal", "descripcion": "Vincula un animal como compañero. +30 a sus stats. Comparte PV."},
+            {"nivel": 10, "nombre": "Espíritu del Bosque", "tipo": "P", "alcance": "Propio", "duracion": "1 hora/nivel", "area": "Propio", "descripcion": "Se convierte en un espíritu del bosque. Inmune a ataques físicos no mágicos."}
+          ]
+        },
+        {
+          "nombre": "Camino de la Planta",
+          "descripcion": "Sortilegios de interacción con plantas.",
+          "tipo_lista": "abierta",
+          "circulo_minimo": 2,
+          "sortilegios": [
+            {"nivel": 2, "nombre": "Sentir Plantas", "tipo": "U", "alcance": "Propio", "duracion": "Concentración", "area": "Radio 30m", "descripcion": "Siente la presencia y estado de las plantas cercanas."},
+            {"nivel": 3, "nombre": "Comida del Bosque", "tipo": "U", "alcance": "Toque", "duracion": "Instantáneo", "area": "1 kg", "descripcion": "Crea frutos y bayas comestibles de plantas silvestres."},
+            {"nivel": 4, "nombre": "Cobertura Vegetal", "tipo": "P", "alcance": "Propio", "duracion": "1 min/nivel", "area": "Propio", "descripcion": "Las plantas se apartan a tu paso y vuelven a cerrarse tras ti."},
+            {"nivel": 5, "nombre": "Curación Verde", "tipo": "E", "alcance": "Toque", "duracion": "Instantáneo", "area": "1 criatura", "descripcion": "Usa plantas para curar 2-20 PV. Requiere plantas frescas cerca."},
+            {"nivel": 6, "nombre": "Atrapar enredaderas", "tipo": "F", "alcance": "30m", "duracion": "1 min/nivel", "area": "Radio 5m", "descripcion": "Enredaderas atrapan a un enemigo. TR para liberarse."},
+            {"nivel": 7, "nombre": "Crecimiento Rápido", "tipo": "U", "alcance": "10m", "duracion": "Instantáneo", "area": "4m cúbicos", "descripcion": "Hace crecer plantas instantáneamente."},
+            {"nivel": 8, "nombre": "Escudo de Corteza", "tipo": "P", "alcance": "Toque", "duracion": "1 hora/nivel", "area": "1 criatura", "descripcion": "Piel como corteza. BD +20 contra ataques físicos."},
+            {"nivel": 9, "nombre": "Vida del Bosque", "tipo": "E", "alcance": "Toque", "duracion": "Instantáneo", "area": "1 criatura", "descripcion": "Absorbe vida de las plantas para curar 4-40 PV."},
+            {"nivel": 10, "nombre": "Bosque Viviente", "tipo": "F", "alcance": "100m", "duracion": "1 hora/nivel", "area": "Radio 100m", "descripcion": "Todo el bosque se vuelve hostil a tus enemigos. Árboles atacan."}
+          ]
+        },
+        {
+          "nombre": "Protección Natural",
+          "descripcion": "Sortilegios defensivos basados en la naturaleza.",
+          "tipo_lista": "abierta",
+          "circulo_minimo": 3,
+          "sortilegios": [
+            {"nivel": 3, "nombre": "Piel de Cuero", "tipo": "P", "alcance": "Propio", "duracion": "1 hora/nivel", "area": "Propio", "descripcion": "Piel endurecida. BD +5. Reduce perforación -5."},
+            {"nivel": 4, "nombre": "Escudo de Ramas", "tipo": "U", "alcance": "Propio", "duracion": "1 min/nivel", "area": "Propio", "descripcion": "Ramas entrelazadas te protegen. BD +15."},
+            {"nivel": 5, "nombre": "Capullo", "tipo": "E", "alcance": "Toque", "duracion": "1 hora/nivel", "area": "1 criatura", "descripcion": "Capullo de hojas que cura 1 PV/hora mientras el objetivo descansa."},
+            {"nivel": 6, "nombre": "Mimetismo", "tipo": "P", "alcance": "Propio", "duracion": "1 hora/nivel", "area": "Propio", "descripcion": "Te vuelves indistinguible de la vegetación del entorno."},
+            {"nivel": 7, "nombre": "Coraza de Espinas", "tipo": "P", "alcance": "Propio", "duracion": "1 min/nivel", "area": "Propio", "descripcion": "Espinas. 2-20 PV a quien te golpee cuerpo a cuerpo."},
+            {"nivel": 8, "nombre": "Refugio Natural", "tipo": "U", "alcance": "Propio", "duracion": "1 hora/nivel", "area": "Radio 3m", "descripcion": "Crea una cueva/refugio temporal de raíces y tierra."},
+            {"nivel": 9, "nombre": "Capa de Hojas", "tipo": "P", "alcance": "Propio", "duracion": "1 hora/nivel", "area": "Propio", "descripcion": "Capa mágica de hojas. +20 a todas las resistencias."},
+            {"nivel": 10, "nombre": "Escudo del Bosque", "tipo": "U", "alcance": "Propio", "duracion": "1 min/nivel", "area": "Radio 10m", "descripcion": "El bosque entero te protege. +50 BD. Los árboles desvían ataques."}
+          ]
+        }
+      ]
+    },
+    "bardo": {
+      "descripcion": "Músico, diplomático y erudito. Magia basada en el sonido, el conocimiento y la persuasión.",
+      "listas_base": [
+        {
+          "nombre": "Control del Sonido",
+          "descripcion": "Sortilegios que manipulan el sonido y la música.",
+          "tipo_lista": "abierta",
+          "circulo_minimo": 1,
+          "sortilegios": [
+            {"nivel": 1, "nombre": "Afinar", "tipo": "U", "alcance": "Propio", "duracion": "1 min/nivel", "area": "Propio", "descripcion": "Instrumento suena perfectamente. +10 a Interpretar."},
+            {"nivel": 2, "nombre": "Sonido Encantador", "tipo": "I", "alcance": "30m", "duracion": "Concentración", "area": "Radio 20m", "descripcion": "Música fascinante. Los oyentes deben TR o quedan absortos."},
+            {"nivel": 3, "nombre": "Música de Fondo", "tipo": "U", "alcance": "50m", "duracion": "1 hora/nivel", "area": "Radio 50m", "descripcion": "Música ambiental. +10 a Moral de aliados. -10 a Percepción de enemigos."},
+            {"nivel": 4, "nombre": "Canción de Cuna", "tipo": "I", "alcance": "30m", "duracion": "Concentración", "area": "Radio 10m", "descripcion": "Canción que induce sueño. TR o dormir. Nivel < 5 o PV < 30."},
+            {"nivel": 5, "nombre": "Danza Hipnótica", "tipo": "I", "alcance": "30m", "duracion": "Concentración", "area": "Radio 10m", "descripcion": "Música y danza que hipnotiza. TR cada asalto."},
+            {"nivel": 6, "nombre": "Sonido Atronador", "tipo": "F", "alcance": "20m", "duracion": "Instantáneo", "area": "Cono 10m", "descripcion": "Estallido sónico. 3-30 PV. Aturde 1 asalto."},
+            {"nivel": 7, "nombre": "Melodía Curativa", "tipo": "E", "alcance": "30m", "duracion": "1 minuto", "area": "Radio 10m", "descripcion": "Música que cura 1-10 PV/minuto a los aliados."},
+            {"nivel": 8, "nombre": "Sinfonía Heroica", "tipo": "P", "alcance": "30m", "duracion": "1 min/nivel", "area": "Radio 10m", "descripcion": "Música inspiradora. Aliados +10 a ataques y +5 a daño."},
+            {"nivel": 9, "nombre": "Lamento Mortal", "tipo": "F", "alcance": "50m", "duracion": "Concentración", "area": "Radio 20m", "descripcion": "Melodía triste. 4-40 PV/asalto a enemigos. TR 1/2."},
+            {"nivel": 10, "nombre": "Canción del Poder", "tipo": "P", "alcance": "Propio", "duracion": "1 hora/nivel", "area": "Radio 100m", "descripcion": "Canción épica. Todos los aliados +20 a todo. Enemigos -10."}
+          ]
+        },
+        {
+          "nombre": "Conocimiento de Objetos",
+          "descripcion": "Sortilegios para identificar y comprender objetos y artefactos.",
+          "tipo_lista": "abierta",
+          "circulo_minimo": 1,
+          "sortilegios": [
+            {"nivel": 1, "nombre": "Identificar Objeto", "tipo": "U", "alcance": "Toque", "duracion": "Instantáneo", "area": "1 objeto", "descripcion": "Identifica el propósito básico de un objeto."},
+            {"nivel": 2, "nombre": "Leer Inscripción", "tipo": "U", "alcance": "Toque", "duracion": "Instantáneo", "area": "Inscripción", "descripcion": "Lee cualquier inscripción en cualquier idioma."},
+            {"nivel": 3, "nombre": "Valorar Objeto", "tipo": "U", "alcance": "Toque", "duracion": "Instantáneo", "area": "1 objeto", "descripcion": "Conoce el valor histórico y monetario de un objeto."},
+            {"nivel": 4, "nombre": "Sentir Magia", "tipo": "U", "alcance": "Toque", "duracion": "Instantáneo", "area": "1 objeto", "descripcion": "Detección básica de magia en un objeto."},
+            {"nivel": 5, "nombre": "Historia del Objeto", "tipo": "U", "alcance": "Toque", "duracion": "Instantáneo", "area": "1 objeto", "descripcion": "Ve imágenes del pasado del objeto (último año)."},
+            {"nivel": 6, "nombre": "Análisis de Propiedades", "tipo": "U", "alcance": "Toque", "duracion": "1 asalto", "area": "1 objeto", "descripcion": "Determina las propiedades mágicas exactas de un objeto."},
+            {"nivel": 7, "nombre": "Historia Completa", "tipo": "U", "alcance": "Toque", "duracion": "1 minuto", "area": "1 objeto", "descripcion": "Ve toda la historia del objeto desde su creación."},
+            {"nivel": 8, "nombre": "Hablar con Objetos", "tipo": "I", "alcance": "Toque", "duracion": "1 min/nivel", "area": "1 objeto", "descripcion": "Los objetos responden preguntas simples sobre sí mismos."},
+            {"nivel": 9, "nombre": "Despertar Objeto", "tipo": "P", "alcance": "Toque", "duracion": "1 hora/nivel", "area": "1 objeto", "descripcion": "Un objeto inanimado cobra conciencia limitada."},
+            {"nivel": 10, "nombre": "Maestría de Artefactos", "tipo": "U", "alcance": "Toque", "duracion": "1 hora/nivel", "area": "1 artefacto", "descripcion": "Comprende y usa cualquier artefacto mágico sin restricciones."}
+          ]
+        },
+        {
+          "nombre": "Canciones de Protección",
+          "descripcion": "Canciones mágicas que protegen y fortalecen.",
+          "tipo_lista": "abierta",
+          "circulo_minimo": 1,
+          "sortilegios": [
+            {"nivel": 1, "nombre": "Canción de Ánimo", "tipo": "P", "alcance": "10m", "duracion": "1 min/nivel", "area": "1 aliado", "descripcion": "Aliado +10 a Moral y Resistencia al miedo."},
+            {"nivel": 2, "nombre": "Canción Guardiana", "tipo": "U", "alcance": "Propio", "duracion": "1 min/nivel", "area": "Propio", "descripcion": "Protección básica. BD +5 mientras canta."},
+            {"nivel": 3, "nombre": "Canción de Descanso", "tipo": "E", "alcance": "10m", "duracion": "1 hora", "area": "Radio 10m", "descripcion": "Música relajante. Descanso recupera el doble de PV."},
+            {"nivel": 4, "nombre": "Canción Antimagia", "tipo": "U", "alcance": "Propio", "duracion": "Concentración", "area": "Radio 5m", "descripcion": "Interrumpe sortilegios enemigos. TR -20 a sortilegios dentro."},
+            {"nivel": 5, "nombre": "Canción de Fortaleza", "tipo": "P", "alcance": "10m", "duracion": "1 min/nivel", "area": "Radio 10m", "descripcion": "Aliados +20 a todas las resistencias."},
+            {"nivel": 6, "nombre": "Canción de Escudo", "tipo": "U", "alcance": "Propio", "duracion": "1 min/nivel", "area": "Radio 3m", "descripcion": "Escudo sonoro. BD +15 a todos los aliados en el área."},
+            {"nivel": 7, "nombre": "Canción de los Héroes", "tipo": "P", "alcance": "30m", "duracion": "1 hora/nivel", "area": "Radio 30m", "descripcion": "Todos los aliados +10 a ataques, +5 a BD, +10 a TR."},
+            {"nivel": 8, "nombre": "Canción de la Tierra", "tipo": "P", "alcance": "Propio", "duracion": "1 hora/nivel", "area": "Radio 50m", "descripcion": "Conexión con la tierra. +30 a todas las habilidades al tocar el suelo."},
+            {"nivel": 9, "nombre": "Canción de Inmunidad", "tipo": "U", "alcance": "30m", "duracion": "1 hora/nivel", "area": "Radio 10m", "descripcion": "Inmunidad a miedo, confusión y control mental."},
+            {"nivel": 10, "nombre": "Balada de la Creación", "tipo": "U", "alcance": "Propio", "duracion": "1 hora/nivel", "area": "Radio 100m", "descripcion": "Música de poder absoluto. Aliados inmunes a daño. Enemigos -50 a todo."}
+          ]
+        },
+        {
+          "nombre": "Conocimiento de Lenguas",
+          "descripcion": "Sortilegios de lenguas y comunicación.",
+          "tipo_lista": "abierta",
+          "circulo_minimo": 1,
+          "sortilegios": [
+            {"nivel": 1, "nombre": "Leer Idiomas", "tipo": "U", "alcance": "Propio", "duracion": "1 min/nivel", "area": "Propio", "descripcion": "Lee cualquier idioma escrito."},
+            {"nivel": 2, "nombre": "Traducir", "tipo": "U", "alcance": "Propio", "duracion": "1 min/nivel", "area": "Propio", "descripcion": "Comprende cualquier idioma hablado."},
+            {"nivel": 3, "nombre": "Hablar Idiomas", "tipo": "U", "alcance": "Propio", "duracion": "1 min/nivel", "area": "Propio", "descripcion": "Habla cualquier idioma con fluidez."},
+            {"nivel": 4, "nombre": "Escribir Idiomas", "tipo": "U", "alcance": "Propio", "duracion": "1 min/nivel", "area": "Propio", "descripcion": "Escribe en cualquier idioma con precisión."},
+            {"nivel": 5, "nombre": "Mensaje Mental", "tipo": "U", "alcance": "1 km", "duracion": "Instantáneo", "area": "1 criatura", "descripcion": "Envía un mensaje telepático de 10 palabras."},
+            {"nivel": 6, "nombre": "Comprensión Universal", "tipo": "U", "alcance": "Propio", "duracion": "1 hora/nivel", "area": "Propio", "descripcion": "Comprende cualquier forma de comunicación, incluyendo lenguaje corporal."},
+            {"nivel": 7, "nombre": "Conversación Remota", "tipo": "U", "alcance": "10 km", "duracion": "1 min/nivel", "area": "1 criatura", "descripcion": "Conversación bidireccional a distancia."},
+            {"nivel": 8, "nombre": "Leer Mentes", "tipo": "I", "alcance": "10m", "duracion": "Concentración", "area": "1 criatura", "descripcion": "Lee pensamientos superficiales. TR para negar."},
+            {"nivel": 9, "nombre": "Idioma Perfecto", "tipo": "P", "alcance": "Toque", "duracion": "1 día/nivel", "area": "1 criatura", "descripcion": "El objetivo habla, lee y escribe todos los idiomas perfectamente."},
+            {"nivel": 10, "nombre": "Voz de Todas las Cosas", "tipo": "U", "alcance": "Propio", "duracion": "1 hora/nivel", "area": "Propio", "descripcion": "Comprende el lenguaje de animales, plantas y objetos."}
+          ]
+        },
+        {
+          "nombre": "Encanto",
+          "descripcion": "Sortilegios de persuasión y carisma mágico.",
+          "tipo_lista": "abierta",
+          "circulo_minimo": 1,
+          "sortilegios": [
+            {"nivel": 1, "nombre": "Encanto Personal", "tipo": "I", "alcance": "10m", "duracion": "1 min/nivel", "area": "1 criatura", "descripcion": "+20 a Presencia y Diplomacia."},
+            {"nivel": 2, "nombre": "Simpatía", "tipo": "I", "alcance": "10m", "duracion": "1 min/nivel", "area": "1 criatura", "descripcion": "El objetivo te ve como amigo. TR si está en combate."},
+            {"nivel": 3, "nombre": "Persuadir", "tipo": "I", "alcance": "10m", "duracion": "1 hora/nivel", "area": "1 criatura", "descripcion": "Convencer a alguien de algo razonable. +30 a Persuadir."},
+            {"nivel": 4, "nombre": "Confianza", "tipo": "I", "alcance": "10m", "duracion": "1 hora/nivel", "area": "1 criatura", "descripcion": "El objetivo confía plenamente en ti."},
+            {"nivel": 5, "nombre": "Inspirar Lealtad", "tipo": "I", "alcance": "30m", "duracion": "1 día/nivel", "area": "Radio 10m", "descripcion": "Todos los aliados ganan lealtad inquebrantable."},
+            {"nivel": 6, "nombre": "Amistad Verdadera", "tipo": "I", "alcance": "Toque", "duracion": "Permanente", "area": "1 criatura", "descripcion": "El objetivo se convierte en un amigo leal."},
+            {"nivel": 7, "nombre": "Dominar Voluntad", "tipo": "I", "alcance": "10m", "duracion": "1 hora/nivel", "area": "1 criatura", "descripcion": "Control sobre las acciones del objetivo."},
+            {"nivel": 8, "nombre": "devoción", "tipo": "I", "alcance": "10m", "duracion": "1 día/nivel", "area": "1 criatura", "descripcion": "El objetivo te sigue ciegamente."},
+            {"nivel": 9, "nombre": "Rey de Corazones", "tipo": "I", "alcance": "50m", "duracion": "1 hora/nivel", "area": "Radio 50m", "descripcion": "Todos los que te ven te respetan y admiran."},
+            {"nivel": 10, "nombre": "Voz de Mando", "tipo": "I", "alcance": "100m", "duracion": "Concentración", "area": "Radio 100m", "descripcion": "Tus palabras son órdenes. Quien te oye debe obedecer o TR con -30."}
+          ]
+        }
+      ]
+    }
+  },
+  "reglas_uso": {
+    "aprender_sortilegio": "Para aprender un sortilegio, el personaje debe tener grado en la lista correspondiente y nivel >= círculo del sortilegio. Coste: 1 PD por sortilegio.",
+    "lanzar_sortilegio": "Tirada abierta 1d100 + Bono de Sortilegios (grados en la lista + bono IG para Magos/Bardos, IT para Animistas/Montaraces). Resultado en AT-9 para sortilegios no dirigidos, AT-7 para rayos, AT-8 para bolas.",
+    "coste_pp": "Cada sortilegio cuesta una cantidad de PP igual a su nivel × 2 (según el manual básico). El DJ puede ajustar este coste.",
+    "listas_abiertas": "Cualquier personaje con capacidad mágica y PD suficientes puede aprender listas abiertas. Coste de desarrollo: 4 para Magos/Animistas, 5 para Montaraces/Bardos, 10 para no-mágicos.",
+    "listas_cerradas": "Disponibles solo para la profesión indicada y profesiones afines con coste mayor. Coste de desarrollo: 3 para la profesión, 8 para otras mágicas.",
+    "circulo_minimo": "Un personaje debe tener nivel igual o superior al círculo para aprender sortilegios de esa lista. Ej: círculo 1 → nivel 1+, círculo 3 → nivel 3+."
+  }
+}

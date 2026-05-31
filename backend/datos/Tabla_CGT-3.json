@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "tabla": "CGT-3",
+    "nombre": "Razas y Culturas de la Tierra Media",
+    "fuente": "Manual MERP, página 30",
+    "nota": "Usada para determinar raza (tirada aleatoria o selección directa) y obtener los Puntos de Historial iniciales."
+  },
+  "razas": [
+    {
+      "codigo": "humano",
+      "nombre": "Humano (Occidental)",
+      "puntos_historial": 2,
+      "tirada": {"min": 1, "max": 20},
+      "descripcion": "Habitantes de Eriador, Gondor y Rohan.",
+      "longevidad_tipica": "70-80 años",
+      "vision": "Normal"
+    },
+    {
+      "codigo": "dunedain",
+      "nombre": "Dúnedain",
+      "puntos_historial": 3,
+      "tirada": {"min": 21, "max": 35},
+      "descripcion": "Descendientes de los Reyes de Númenor. Guardias del Norte.",
+      "longevidad_tipica": "150-200 años",
+      "vision": "Normal"
+    },
+    {
+      "codigo": "enano",
+      "nombre": "Enano",
+      "puntos_historial": 4,
+      "tirada": {"min": 36, "max": 50},
+      "descripcion": "Habitantes de las montañas y minas. Expertos artesanos.",
+      "longevidad_tipica": "200-300 años",
+      "vision": "Normal (visión nocturna en cuevas)"
+    },
+    {
+      "codigo": "elfo_silvano",
+      "nombre": "Elfo Silvano",
+      "puntos_historial": 3,
+      "tirada": {"min": 51, "max": 65},
+      "descripcion": "Elfos de los grandes bosques (Bosque Negro, Lórien).",
+      "longevidad_tipica": "Inmortal",
+      "vision": "Visión nocturna"
+    },
+    {
+      "codigo": "alto_elfo",
+      "nombre": "Alto Elfo (Noldor/Sindar)",
+      "puntos_historial": 3,
+      "tirada": {"min": 66, "max": 75},
+      "descripcion": "Elfos de la Luz de Aman y Beleriand. Artesanos y sabios.",
+      "longevidad_tipica": "Inmortal",
+      "vision": "Visión nocturna"
+    },
+    {
+      "codigo": "hobbit",
+      "nombre": "Hobbit",
+      "puntos_historial": 5,
+      "tirada": {"min": 76, "max": 85},
+      "descripcion": "Pueblos de la Comarca y de Bree. Pequeños y resistentes.",
+      "longevidad_tipica": "90-100 años",
+      "vision": "Normal"
+    },
+    {
+      "codigo": "medio_elfo",
+      "nombre": "Medio-elfo",
+      "puntos_historial": 2,
+      "tirada": {"min": 86, "max": 90},
+      "descripcion": "Descendencia mixta entre humanos y elfos.",
+      "longevidad_tipica": "200-500 años",
+      "vision": "Visión nocturna"
+    },
+    {
+      "codigo": "orco",
+      "nombre": "Orco",
+      "puntos_historial": 1,
+      "tirada": {"min": 91, "max": 95},
+      "descripcion": "Criaturas de Morgoth y Sauron. Brutales y numerosos.",
+      "longevidad_tipica": "40-60 años",
+      "vision": "Visión nocturna"
+    },
+    {
+      "codigo": "troll",
+      "nombre": "Troll",
+      "puntos_historial": 0,
+      "tirada": {"min": 96, "max": 100},
+      "descripcion": "Gigantes brutales y de poca inteligencia. Se petrifican con la luz del sol.",
+      "longevidad_tipica": "Desconocida",
+      "vision": "Visión nocturna"
+    }
+  ],
+  "notas_uso": {
+    "determinacion": "El jugador puede tirar 1d100 y consultar la columna 'tirada', o elegir directamente su raza con acuerdo del Director de Juego.",
+    "tras_elegir": "Una vez determinada la raza, consultar BT-3 para aplicar modificadores raciales a las características y resistencias.",
+    "apariencia": "La Apariencia (APA) se calcula como: tirada 1d100 + bono total de Presencia (BT-1 + BT-3).",
+    "puntos_historial": "Se gastan en Opciones de Historial (capacidades especiales, equipo, contactos, etc.) según las reglas del manual."
+  }
+}

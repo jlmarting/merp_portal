@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --ring: 217 91% 60%;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wizard-step-enter-active,
+.wizard-step-leave-active {
+  transition: all 0.3s ease;
+}
+.wizard-step-enter-from {
+  opacity: 0;
+  transform: translateX(30px);
+}
+.wizard-step-leave-to {
+  opacity: 0;
+  transform: translateX(-30px);
+}

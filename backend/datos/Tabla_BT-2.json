@@ -1,0 +1,217 @@
+{
+  "meta": {
+    "tabla": "BT-2",
+    "nombre": "Características Asociadas a Habilidades",
+    "fuente": "Manual MERP, página 29",
+    "nota": "Determina qué característica proporciona la bonificación a cada habilidad."
+  },
+  "habilidades": {
+    "armas_filo": {
+      "categoria": "Armas",
+      "caracteristica": "fuerza",
+      "nota": "Espada ancha, daga, cimitarra, espada corta, hacha"
+    },
+    "armas_contundentes": {
+      "categoria": "Armas",
+      "caracteristica": "fuerza",
+      "nota": "Garrote, maza, martillo de guerra, mayal"
+    },
+    "armas_a_dos_manos": {
+      "categoria": "Armas",
+      "caracteristica": "fuerza",
+      "nota": "Hacha de combate, espadón, barra, mayal pesado"
+    },
+    "armas_de_asta": {
+      "categoria": "Armas",
+      "caracteristica": "fuerza",
+      "nota": "Lanza, alabarda, pica, asta"
+    },
+    "proyectiles": {
+      "categoria": "Armas",
+      "caracteristica": "agilidad",
+      "nota": "Arco corto, arco largo, arco compuesto, ballesta"
+    },
+    "armas_arrojadizas": {
+      "categoria": "Armas",
+      "caracteristica": "agilidad",
+      "nota": "Honda, daga arrojadiza, jabalina, boleadora"
+    },
+    "movimiento_y_maniobra": {
+      "categoria": "Movimiento",
+      "caracteristica": "variable",
+      "regla": "agilidad_por_defecto",
+      "condicion": {
+        "descripcion": "Si la armadura equipada es pesada (malla, coraza, etc.), usa Fuerza",
+        "armaduras_pesadas": ["Cota de Malla", "Coraza", "Armadura de Placas"],
+        "caracteristica_alternativa": "fuerza"
+      },
+      "nota": "Penalización por armadura aplicada en bono_especial"
+    },
+    "trepar": {
+      "categoria": "Movimiento",
+      "caracteristica": "agilidad"
+    },
+    "nadar": {
+      "categoria": "Movimiento",
+      "caracteristica": "constitucion"
+    },
+    "saltar": {
+      "categoria": "Movimiento",
+      "caracteristica": "agilidad"
+    },
+    "montar": {
+      "categoria": "Movimiento",
+      "caracteristica": "agilidad"
+    },
+    "esquiar": {
+      "categoria": "Movimiento",
+      "caracteristica": "agilidad"
+    },
+    "volar": {
+      "categoria": "Movimiento",
+      "caracteristica": "agilidad",
+      "nota": "Monturas voladoras o magia de vuelo"
+    },
+    "sigilo": {
+      "categoria": "Subterfugio",
+      "caracteristica": "agilidad"
+    },
+    "emboscar": {
+      "categoria": "Subterfugio",
+      "caracteristica": "ninguna",
+      "nota": "No aplica bono de característica. Afecta la gravedad de críticos tras maniobra con éxito."
+    },
+    "escalar": {
+      "categoria": "Subterfugio",
+      "caracteristica": "agilidad",
+      "nota": "A veces agrupada con Trepar según la edición"
+    },
+    "ocultarse": {
+      "categoria": "Subterfugio",
+      "caracteristica": "agilidad"
+    },
+    "desactivar_trampas": {
+      "categoria": "Subterfugio",
+      "caracteristica": "inteligencia",
+      "nota": "Ediciones avanzadas; en edición básica puede usar Agilidad"
+    },
+    "manipular_cerraduras": {
+      "categoria": "Subterfugio",
+      "caracteristica": "agilidad"
+    },
+    "manipular_cuerdas": {
+      "categoria": "Subterfugio",
+      "caracteristica": "agilidad"
+    },
+    "percibir": {
+      "categoria": "General",
+      "caracteristica": "intuicion"
+    },
+    "orientarse": {
+      "categoria": "General",
+      "caracteristica": "intuicion"
+    },
+    "rastrear": {
+      "categoria": "General",
+      "caracteristica": "intuicion"
+    },
+    "manejar_animal": {
+      "categoria": "General",
+      "caracteristica": "presencia"
+    },
+    "primeros_auxilios": {
+      "categoria": "General",
+      "caracteristica": "inteligencia"
+    },
+    "leer_runas": {
+      "categoria": "General",
+      "caracteristica": "inteligencia",
+      "nota": "Prerrequisito para usar objetos mágicos escritos"
+    },
+    "usar_objetos_magicos": {
+      "categoria": "General",
+      "caracteristica": "inteligencia"
+    },
+    "conocimiento_de_lenguas": {
+      "categoria": "General",
+      "caracteristica": "inteligencia"
+    },
+    "conocimiento_historico": {
+      "categoria": "General",
+      "caracteristica": "inteligencia"
+    },
+    "conocimiento_de_plantas": {
+      "categoria": "General",
+      "caracteristica": "inteligencia"
+    },
+    "conocimiento_de_animales": {
+      "categoria": "General",
+      "caracteristica": "inteligencia"
+    },
+    "navegar": {
+      "categoria": "General",
+      "caracteristica": "inteligencia"
+    },
+    "liderazgo": {
+      "categoria": "General",
+      "caracteristica": "presencia"
+    },
+    "comercio": {
+      "categoria": "General",
+      "caracteristica": "presencia"
+    },
+    "interpretar": {
+      "categoria": "General",
+      "caracteristica": "presencia"
+    },
+    "diplomacia": {
+      "categoria": "General",
+      "caracteristica": "presencia"
+    },
+    "desarrollo_fisico": {
+      "categoria": "Desarrollo",
+      "caracteristica": "constitucion",
+      "nota": "Cada grado permite tirar 1d10 + bono CO para PV máximos"
+    },
+    "desarrollo_de_poder": {
+      "categoria": "Desarrollo",
+      "caracteristica": "intuicion",
+      "nota": "Cada grado permite tirar 1d10 + bono IT para PP máximos"
+    },
+    "sortilegios_base": {
+      "categoria": "Magia",
+      "caracteristica": "inteligencia",
+      "nota": "Base para aprender sortilegios. Círculos específicos dependen de la profesión."
+    },
+    "sortilegios_abertura": {
+      "categoria": "Magia",
+      "caracteristica": "inteligencia",
+      "nota": "Círculo de apertura / Listas abiertas"
+    },
+    "sortilegios_cerrados": {
+      "categoria": "Magia",
+      "caracteristica": "inteligencia",
+      "nota": "Círculos cerrados / Listas cerradas por profesión"
+    },
+    "forja": {
+      "categoria": "Oficios",
+      "caracteristica": "fuerza"
+    },
+    "carpinteria": {
+      "categoria": "Oficios",
+      "caracteristica": "fuerza"
+    },
+    "cocinar": {
+      "categoria": "Oficios",
+      "caracteristica": "inteligencia"
+    },
+    "coser": {
+      "categoria": "Oficios",
+      "caracteristica": "agilidad"
+    }
+  },
+  "reglas_especiales": {
+    "movimiento_y_maniobra": "Ver atributo 'condicion' en la habilidad. El motor de cálculo debe evaluar el tipo de armadura equipada para determinar si usa Fuerza o Agilidad.",
+    "emboscar": "Su bono_carac siempre es 0. Su efecto se aplica como modificador a la gravedad de críticos tras una maniobra de ataque con éxito."
+  }
+}
